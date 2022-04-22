@@ -1,108 +1,127 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
-Welcome Iris-Smok,
+<h1 align="center">The Healthy Family</h1>
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+                Image
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+This is a full-stack framework project built using Django, Python, HTML, CSS and JavaScript. My goal is to create a functioning and responsive website, that allows users to post recipes, comment recipes and like or unlike them. This project has been built for educational purposes.
 
-## Gitpod Reminders
+# About
+The Healthy Family is a website where users comment, like and view recipe and also sheare their own recipe with other users.
+This page is intended for all parents and others who are looking for inspiration in preparing meals for their children. 
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+#
+# UX
 
-`python3 -m http.server`
 
-A blue button should appear to click: _Make Public_,
 
-Another blue button should appear to click: _Open Browser_.
+## Users Stories 
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+**Epic: Admin**
+- As a site admin I can create, edit and delete recipes and comments so that I can manage the site content
+- As a site admin I can access the admin panel so that I can manage recipes and comments
 
-A blue button should appear to click: _Make Public_,
+**Epic: User Interaction**
+- As a logged-in user I can write comments on recipes so that I can leave my feedback
+- As a logged-in user I can like and unlike recipes so that I can mark which recipes I like
 
-Another blue button should appear to click: _Open Browser_.
+**Epic: User Recipes**
+- As a logged-in user I can post a recipes so that other users can see them
+- As a user I can delete my recipe so that I can remove any unwanted recipes that I have made
+- As a user I can edit recipes so that I can update any changes or mistakes to my recipes
+- As a logged-in user I can upload an image along with my recipe so that other users can see what the dish looks like
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+**Epic: Login/Register**
+- As a user I can register for an account so that I can interact with the site content
+- As a user I can login/logout off my account if I wish so that I can connect or disconnect from the website
+- As a user I can easily see if I'm logged-in or logged-out so that I can be sure what my status is
 
-To log into the Heroku toolbelt CLI:
+**Epic: Navigation**
+- As a user I can easily navigate through the site so that I can view desired content
+- As a user I can browse the site content by categories so that I can find new cooking ideas in the category that interests me
+- As a user I can search the desirable recipe by keyword so that I can find the recipe I want faster
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+#
+# Scope 
 
-------
+## Features
 
-## Release History
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+### Future Features
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+#
+# Structure
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+# Wireframes
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+# Database schema
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+# Surface
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+## Design 
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+## Chosens Color 
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+ 
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+## Font 
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
 
-------
+## Media
 
-## FAQ about the uptime script
 
-**Why have you added this script?**
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+# Technologies Used
 
-**How will this affect me?**
+## Languages 
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+## Frameworks, Libraries & Programs Used
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
 
-**So….?**
+# Testing
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
 
-**Can I opt out?**
+# Validating 
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+## User Story Testing
 
-**Anything more?**
+### **Testing Users Stories form (UX) Section**
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
 
----
 
-Happy coding!
+### **HTML Validator** 
+
+
+
+
+### **CSS Validator** 
+
+
+# Final Product 
+
+
+# Deployment
+
+
+
+# Credits
+
+## Content
+
+
+## Media
+
+
+## Acknowledgements
+
+
+
+
+

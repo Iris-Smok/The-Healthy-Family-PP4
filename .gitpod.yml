@@ -13,3 +13,6 @@ vscode:
     - esbenp.prettier-vscode
     - CoenraadS.bracket-pair-colorizer
     - redwan-hossain.auto-rename-tag-clone
+    - luma.jupyter
+    - ms-toolsai.jupyter-keymap
+    - ms-toolsai.jupyter-renderers
