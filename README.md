@@ -6,7 +6,7 @@
 This is a full-stack framework project built using Django, Python, HTML, CSS and JavaScript. My goal is to create a functioning and responsive website, that allows users to post recipes, comment recipes and like or unlike them. This project has been built for educational purposes.
 
 # About
-The Healthy Family is a website where users comment, like and view recipe and also sheare their own recipe with other users.
+The Healthy Family is a website where users can comment, like and view recipe and also share their own recipe with other users.
 This page is intended for all parents and others who are looking for inspiration in preparing meals for their children. 
 
 #
