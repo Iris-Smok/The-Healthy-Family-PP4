@@ -3,11 +3,39 @@
 
                 Image
 
-This is a full-stack framework project built using Django, Python, HTML, CSS and JavaScript. My goal is to create a functioning and responsive website, that allows users to post recipes, comment recipes and like or unlike them. This project has been built for educational purposes.
+This is a full-stack framework project built using Django, Python, HTML, CSS and JavaScript. My goal is to create a functioning and responsive website, that allows users to post, comment and like or unlike recipes. This project has been built for educational purposes.
 
 # About
 The Healthy Family is a website where users can comment, like and view recipes and also share their own recipes with other users.
 This page is intended for all parents and others who are looking for inspiration in preparing meals for their children. 
+
+# Table of Contents 
+1. [UX](#ux)
+    - [User Stories](#user-stories)
+
+2. [Scope](#scope)
+    - [Features](#features)
+    - [Future Features](#future-features)
+
+3. [Structure](#structure)
+
+4. [Wireframes](#wireframes)
+
+5. [Database schema](#database-schema)
+
+6. [Surface](#surface)
+
+7. [Technologies Used](#technologies-used)
+
+8. [Testing](#testing)
+
+9. [Validating](#validating)
+
+10. [Final Product](#final-product)
+
+11. [Deployment](#deployment)
+
+12. [Credits](#credits)
 
 #
 # UX
@@ -30,7 +58,7 @@ These users will be looking for:
 
 This website will offer all of these things whilst also allowing for intuitive navigation and conformability of use.
 
-## Users Stories 
+## User Stories 
 
 **Epic: Admin**
 - As a site Admin I can create, edit and delete recipes and comments so that I can manage the site content
