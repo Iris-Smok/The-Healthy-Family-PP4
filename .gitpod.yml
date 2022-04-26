@@ -16,3 +16,4 @@ vscode:
     - luma.jupyter
     - ms-toolsai.jupyter-keymap
     - ms-toolsai.jupyter-renderers
+    - streetsidesoftware.code-spell-checker
