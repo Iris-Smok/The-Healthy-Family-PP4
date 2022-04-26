@@ -43,7 +43,7 @@ Using the core UX principles I first started with Strategy, thinking about the t
 
 The target audience for 'The Healthy Family' are:
 
-- all ages groups but mostly female, mothers
+- all age groups but mostly female, mothers
 - everyone who is looking for inspiration in preparing healthy meals for their children
 - people who like to share their kitchen creations with others
 - people who are not experts in cooking
