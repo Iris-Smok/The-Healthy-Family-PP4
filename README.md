@@ -183,6 +183,10 @@ Wireframes for each device are linked here:
 
 # Database schema
 
+<p align="center">
+<img src="assets/documents/database-schema.png" width="600" height="100%">
+</p>
+
 # Surface
 
 ## Design 
