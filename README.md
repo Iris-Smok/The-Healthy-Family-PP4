@@ -173,7 +173,7 @@ This website will offer all of these things whilst also allowing for intuitive n
 All wireframes were created used [Balsamiq](https://balsamiq.com/)
 
 Wireframes for each device are linked here:
-- [Desktop](assets/documents/wireframes-desktopp.pdf)
+- [Desktop](assets/documents/wireframes-desktop.pdf)
 - [Tablet](assets/documents/wireframes-tablet.pdf)
 - [Mobile](assets/documents/wireframes-mobile.pdf)
 
