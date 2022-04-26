@@ -131,28 +131,28 @@ This website will offer all of these things whilst also allowing for intuitive n
 - Each recipe card will display an image, authors name, date posted, short description and number of likes
 - Each recipe card takes users to the recipe details page 
 
-## **Login/Register**
+### **Login/Register**
 - The Login / Register button takes users to the login page where they can also find a link to the Register page where they can create an account
 
-## **Favorite Recipes Page**
+### **Favorite Recipes Page**
 - Only logged in users can se Favorite Recipes Page
 - The Favorite Recipes page shows all the recipes that the user liked
 
-## **Your Recipes Page**
+### **Your Recipes Page**
 - The Your Recipes page displays all the recipes that user has created
 - At the top there is an Add Recipe button which takes user to the add recipe page
 - Each recipe has two buttons, Edit and Delete
 - Edit button takes user to the edit page
 - Clicking the Delete button will display the message asking the users if they are sure they want to delete that particular recipe
 
-## **Recipes Details Page**
+### **Recipes Details Page**
 - The Recipes Details Page displays all the information about the selected recipes
 - At the top of the page, the recipe card will display Recipes name, author name, date posted and image
 - The main body of the page contains short description of the recipe, ingredients and preparation steps
 - Number of likes and comments are displayed after the preparation steps
 - Commenting section is located at the end of the page, only logged in users can leave a comment
 
-## **Add Recipe Page**
+### **Add Recipe Page**
 - On the Add Recipe page users can add their recipes to the website
 - The user must fill in all the fields in order for the recipe to be published
 - If the user doesn't fill in one of the fields the error message appears
@@ -162,6 +162,9 @@ This website will offer all of these things whilst also allowing for intuitive n
 
 
 ### Future Features
+- Categories
+- Users settings
+- Preparation time
 
 
 #
