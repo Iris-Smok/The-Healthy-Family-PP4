@@ -51,7 +51,7 @@ The target audience for 'The Healthy Family' are:
 
 These users will be looking for:
 - An informative website, with information that is easy-to-find & concise
-- A website that provides healthy and easy to prepare meals
+- A website that offers healthy and easy prepared meals
 - Ability to make a user account in order to interact with the site content
 - Ability to save liked recipes for later use
 - Ability to post, comment and like recipes
@@ -63,6 +63,7 @@ This website will offer all of these things whilst also allowing for intuitive n
 **Epic: Admin**
 - As a site Admin I can create, edit and delete recipes and comments so that I can manage the site content
 - As a site Admin I can access the admin panel so that I can manage recipes and comments
+- As a site Admin I can log out of the admin panel so that I can disconnect from the website
 
 **Epic: User Interaction**
 - As a logged-in User I can write comments on recipes so that I can leave my feedback
@@ -78,7 +79,7 @@ This website will offer all of these things whilst also allowing for intuitive n
 
 **Epic: Login/Register**
 - As a User I can register for an account so that I can interact with the site content
-- As a User I can login/logout off my account if I wish so that I can connect or disconnect from the website
+- As a User I can log in/out off my account if I wish so that I can connect or disconnect from the website
 - As a User I can easily see if I'm logged-in or logged-out so that I can be sure what my status is
 
 **Epic: Navigation**
