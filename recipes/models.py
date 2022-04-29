@@ -40,12 +40,21 @@ class Post(models.Model):
         return self.comments.count()
 
 
-class Comments(models.Model):
+class Comment(models.Model):
     """
-    Comments class
+    Comment class
     """
     post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name='comments_post_name')  # noqa
     name = models.ForeignKey(User, on_delete=models.CASCADE, related_name='comments_name')  # noqa
     email = models.ForeignKey(User, on_delete=models.CASCADE, related_name='email_name')  # noqa
     body = models.TextField()
     created_on = models.DateField(auto_now_add=True)
+
+    class Meta:
+        """
+        ordering
+        """
+        ordering = ['created_on']
+
+    def __str__(self):
+        return f"Comment {self.body} by {self.name}"
