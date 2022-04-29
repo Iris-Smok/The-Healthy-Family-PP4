@@ -33,15 +33,19 @@ class Post(models.Model):
         """
         return self.title
 
-    def number_of_likes(self):
-        """
-        return likes count
-        """
-        return self.likes.count()
-
     def number_of_comments(self):
         """
         return comment count
         """
         return self.comments.count()
 
+
+class Comments(models.Model):
+    """
+    Comments class
+    """
+    post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name='comments')  # noqa
+    name = models.ForeignKey(User, on_delete=models.CASCADE, related_name='comments_name')  # noqa
+    email = models.ForeignKey(User, on_delete=models.CASCADE, related_name='email_name')  # noqa
+    body = models.TextField()
+    created_on = models.DateField(auto_now_add=True)
