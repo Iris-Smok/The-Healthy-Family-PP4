@@ -8,7 +8,18 @@ from .models import Post, Comment
 
 @admin.register(Post)
 class PostAdmin(SummernoteModelAdmin):
+    """
+    Post class in admin panel
+    """
+    list_display = ('title', 'published_on')
+    prepopulated_fields = {'slug': ('title',)}
     summernote_fields = ('description', 'ingredients', ' preparation_steps')
 
 
-admin.site.register(Comment)
+@admin.register(Comment)
+class CommentAdmin(admin.ModelAdmin):
+    """
+    Comment class in admin panel
+    """
+    list_display = ('name', 'body', 'post', 'created_on')
+    search_fields = ('name', 'email', 'body')
