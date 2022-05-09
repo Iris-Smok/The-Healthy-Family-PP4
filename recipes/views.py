@@ -10,4 +10,5 @@ class PostList(TemplateView):
     """
     Home page view
     """
-    template_name = 'base.html'
+    template_name = 'index.html'
+
