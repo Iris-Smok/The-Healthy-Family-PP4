@@ -12,3 +12,9 @@ class PostList(TemplateView):
     """
     template_name = 'index.html'
 
+class AllRecipes(TemplateView):
+    """
+    all_recipes view
+    """
+    template_name='all_recipes.html'
+
