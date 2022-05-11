@@ -4,7 +4,7 @@ font-family: 'Yanone Kaffeesatz', sans-serif; */
 
 body {
     background-color: #F9FAFC;
-    font-family:'Mulish', sans-serif;
+    font-family:'Mulish',sans-serif;
     font-weight: 500;
 }
 
@@ -17,6 +17,7 @@ body {
 
 .navbar-light .navbar-brand{
     color: #2a2a2ada;
+    font-family: 'Patrick Hand', sans-serif;
 }
 
 .navbar-light .navbar-nav .nav-link{
@@ -24,7 +25,7 @@ body {
 }
 
 .navbar-brand{
-    font-size: 24px;
+    font-size: 28px;
     font-weight: 600;   
 }
 
@@ -55,34 +56,61 @@ i{
     background: url('../images/home-page-img-mobile-tablet.jpg') no-repeat top left fixed;
     background-size: cover;
     height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
 
+
+
+/* WELCOME TITLE AND LOGIN/REGISTER BTN */
+
+.col-title{
+    padding: 40px 10px;
+    background-color: rgb(73 69 65 / 87%);
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+    color: #f6f2e6;
+}
+
+.title{
+    font-size: 45px;
+    font-family: 'Patrick Hand', sans-serif;
+}
+
+.btn-home-page{
+    padding: 10px;
+}
 
 
 
 /* 700px and up */
-@media only screen and (min-width: 800px){
-
-    body{
-        margin-left: 2%;
-        margin-right: 2%;
-    }
+@media only screen and (min-width: 768px){
 
     .navbar{
         padding: 1.5rem;
     }
-
-    .navbar-brand{
-        font-size: 26px;
-        font-weight: 600;   
-    }
-    
+   
 
     .hero-image{
         background: url('../images/home-page-img.jpg') no-repeat top center fixed;
+        height: 100vh;
         background-size: cover;
-        height: 90vh;
     }
 
+    .col-title{
+        padding: 60px 30px;
+    }
+
+    .title{
+        font-size: 60px;
+    }
+
+    .col-title{
+        padding: 70px 70px;
+    }
 
 }
+
