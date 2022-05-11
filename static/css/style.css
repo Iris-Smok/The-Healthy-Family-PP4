@@ -10,10 +10,6 @@ body {
 
 /* NAVBAR */
 
-.navbar{
-    padding: 0.7rem;
-}
-
 
 .navbar-light .navbar-brand{
     color: #2a2a2ada;
@@ -53,7 +49,8 @@ i{
 /* HERO IMAGE */
 
 .hero-image{
-    background: url('../images/home-page-img-mobile-tablet.jpg') no-repeat top left fixed;
+    /* background: url('../images/home-page-img-mobile-tablet.jpg') no-repeat top left fixed; */
+    background: url('../images/avocado2.jpg') no-repeat center center fixed;
     background-size: cover;
     height: 90vh;
     display: flex;
@@ -67,12 +64,10 @@ i{
 /* WELCOME TITLE AND LOGIN/REGISTER BTN */
 
 .col-title{
-    padding: 40px 10px;
-    background-color: rgb(73 69 65 / 87%);
-    margin-left: 10px;
-    margin-right: 10px;
+    padding: 40px 15px;
+    background-color: rgb(73 69 65 / 55%);
     border-radius: 5px;
-    color: #f6f2e6;
+    color: #efe5db;
 }
 
 .title{
@@ -84,20 +79,20 @@ i{
     padding: 10px;
 }
 
-
+hr{
+    background: #484747;
+}
 
 /* 700px and up */
 @media only screen and (min-width: 768px){
 
     .navbar{
-        padding: 1.5rem;
+        padding: 1rem;
+        font-size: 1.1rem;
     }
    
-
-    .hero-image{
-        background: url('../images/home-page-img.jpg') no-repeat top center fixed;
-        height: 100vh;
-        background-size: cover;
+    .navbar-brand{
+        font-size: 35px;   
     }
 
     .col-title{
