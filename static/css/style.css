@@ -49,8 +49,7 @@ i{
 /* HERO IMAGE */
 
 .hero-image{
-    /* background: url('../images/home-page-img-mobile-tablet.jpg') no-repeat top left fixed; */
-    background: url('../images/avocado2.jpg') no-repeat center center fixed;
+    background: url('../images/hero-image.jpg') no-repeat center center fixed;
     background-size: cover;
     height: 90vh;
     display: flex;
@@ -81,6 +80,15 @@ i{
 
 hr{
     background: #484747;
+}
+
+.card-margin{
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+.card{
+    max-width: 250px;
 }
 
 /* 700px and up */
