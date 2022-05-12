@@ -90,6 +90,9 @@ hr{
 .card{
     max-width: 250px;
 }
+.img-fit{
+    object-fit: cover;
+}
 
 /* 700px and up */
 @media only screen and (min-width: 768px){
