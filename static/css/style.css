@@ -32,31 +32,8 @@ body {
     width: fit-content;
     }
 
-.search-tab, .search-btn{
-    border-radius: 25px;
-}
-
-input, textarea{
-    width: 100%;
-}
-
-.contact-background{
-    background: url('../images/contact-strawberries.jpg') no-repeat center center;
-    background-size: cover;
-    color: #efe5db;
-    margin-top: 6rem;
-}
 
 
-/* FOOTER */
-
-footer {
-    font-size: 20px;
-}
-
-i{
-    font-size: 30px;
-}
 
 /* HERO IMAGE */
 
@@ -94,21 +71,51 @@ hr{
     background: #484747;
 }
 
-.card-margin{
+
+/* FOOTER */
+
+footer {
+    font-size: 20px;
+}
+
+i{
+    font-size: 30px;
+}
+
+
+/* RECENTLY ADDED RECIPES SECTION*/
+
+.card-recently-added{
     margin: 0 auto;
     margin-bottom: 30px;
 }
 
-.card{
-    max-width: 250px;
-}
 .img-fit{
     object-fit: cover;
 }
 
+
+/* CONTACT US SECTION */
+
 .contact-form-color{
     background-color: rgba(0,0,0,.6);
 }
+
+.search-tab, .search-btn{
+    border-radius: 25px;
+}
+
+input, textarea{
+    width: 100%;
+}
+
+.contact-background{
+    background: url('../images/contact-strawberries.jpg') no-repeat center center;
+    background-size: cover;
+    color: #efe5db;
+    margin-top: 6rem;
+}
+
 /* 700px and up */
 @media only screen and (min-width: 768px){
 
