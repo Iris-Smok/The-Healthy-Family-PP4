@@ -44,5 +44,8 @@
     "rudge",
     "toolsai",
     "wireframes"
-  ]
+  ],
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }

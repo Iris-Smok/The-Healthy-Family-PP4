@@ -32,9 +32,21 @@ body {
     width: fit-content;
     }
 
-.form-control, .btn{
+.search-tab, .search-btn{
     border-radius: 25px;
 }
+
+input, textarea{
+    width: 100%;
+}
+
+.contact-background{
+    background: url('../images/contact-strawberries.jpg') no-repeat center center;
+    background-size: cover;
+    color: #efe5db;
+    margin-top: 6rem;
+}
+
 
 /* FOOTER */
 
@@ -94,6 +106,9 @@ hr{
     object-fit: cover;
 }
 
+.contact-form-color{
+    background-color: rgba(0,0,0,.6);
+}
 /* 700px and up */
 @media only screen and (min-width: 768px){
 

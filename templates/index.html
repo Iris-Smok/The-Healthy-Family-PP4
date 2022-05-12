@@ -18,7 +18,7 @@
     <!-- RECENTLY ADDED RECIPES -->
 <section>
     <div class="text-center mt-5 mb-5 added-recipes-title">
-<h2>Recently Added Recipes</h2>
+        <h3>Recently Added Recipes</h3>
 </div>
 
 <div class="container">
@@ -89,24 +89,24 @@
 
 <!-- EXPLORE -->
 <section>
-    <div class="container">
+    <div class="container mt-5">
         <div class="row">
             <div class="col-12 text-center">
                 <h3 class="h3 display-6">Explore</h3>
                 <p>Looking for an inspiration? Find our most loved recipes below</p>
             </div>
-            <div class="col-sm-7 col-md-8 text-center">
+            <!-- image -->
+            <div class="col-sm-7 col-md-8">
                     <div class="col-6">
                         <br>
                     </div>
                     <div class="explore-image">
-                                <img class="img-fit card-img-top" src="../static/images/explore-image.jpg" alt="" height="400" width="600">
-                                
+                                <img class="img-fit card-img-top" src="../static/images/explore-image.jpg" alt="" height="400" width="600"> 
                             </div>
-                        
                     </div>
                             
 
+            <!-- list of recipes -->
             <div class="col-sm-5 col-md-4 mt-2">
                 <br>
                 <div class="col-6 offset-3">
@@ -150,8 +150,38 @@
 </section>
 
 
+ <!-- CONTACT US -->
 <section>
-    <!-- CONTACT US -->
+    <div class="container-fluid contact-background">
+        <div class="row d-flex justify-content-center pt-5">
+            <div class="col-sm-8">
+                <h2 class="text-center mt-2 mb-3">Contact us</h2>
+            </div>
+        </div>
+    
+        <div class="row d-flex justify-content-center">
+    
+            <div class="col-sm-4 col-md-6">
+                <!-- Contact form -->
+                <form method="POST" class="contact-form full-form mb-5">
+    
+                    <input type="hidden" name="csrfmiddlewaretoken" value="HgkfVOxjWn4WmjFjHLdOoyPcPaiZCLmADeKfSUPJlvIdeEnESph1lTwmQyfFjb22">
+                    
+    
+    <div id="div_id_name" class="control-group"> <label for="id_name" class="control-label requiredField">
+                    Your name<span class="asteriskField">*</span> </label> <div class="controls"> <input type="text" name="name" maxlength="50" class="textinput textInput" required="" id="id_name"> </div> </div> <div id="div_id_email" class="control-group"> <label for="id_email" class="control-label requiredField">
+                    Email<span class="asteriskField">*</span> </label> <div class="controls"> <input type="email" name="email" maxlength="50" class="emailinput" required="" id="id_email"> </div> </div> <div id="div_id_message" class="control-group"> <label for="id_message" class="control-label requiredField">
+                    Message<span class="asteriskField">*</span> </label> <div class="controls"> <textarea name="message" cols="40" rows="10" class="textarea" required="" id="id_message"></textarea> </div> </div>
+    
+    
+                    <button type="submit" class="button mt-4 text-center btn-warning d-block m-auto">Send
+                        message</button>
+    
+                </form>
+            </div>
+        </div>
+    </div>
+    
 </section>
 
 {%endblock%}
