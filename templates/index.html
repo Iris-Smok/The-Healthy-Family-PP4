@@ -154,30 +154,40 @@
 <section>
     <div class="container-fluid contact-background" id="contact-form">
         <div class="row d-flex justify-content-center pt-5">
+
+            <!-- Contact title -->
             <div class="col-sm-8">
                 <h2 class="text-center mt-2 mb-3">Contact us</h2>
             </div>
         </div>
-    
+
+            <!-- Contact form  -->
         <div class="row d-flex justify-content-center">
-    
             <div class="col-sm-4 col-md-6">
-                <!-- Contact form -->
+
                 <form method="POST" class="contact-form full-form mb-5">
-    
-                    <input type="hidden" name="csrfmiddlewaretoken" value="HgkfVOxjWn4WmjFjHLdOoyPcPaiZCLmADeKfSUPJlvIdeEnESph1lTwmQyfFjb22">
-                    
-    
-    <div id="div_id_name" class="control-group"> <label for="id_name" class="control-label requiredField">
-                    Your name<span class="asteriskField">*</span> </label> <div class="controls"> <input type="text" name="name" maxlength="50" class="textinput textInput" required="" id="id_name"> </div> </div> <div id="div_id_email" class="control-group"> <label for="id_email" class="control-label requiredField">
-                    Email<span class="asteriskField">*</span> </label> <div class="controls"> <input type="email" name="email" maxlength="50" class="emailinput" required="" id="id_email"> </div> </div> <div id="div_id_message" class="control-group"> <label for="id_message" class="control-label requiredField">
-                    Message<span class="asteriskField">*</span> </label> <div class="controls"> <textarea name="message" cols="40" rows="10" class="textarea" required="" id="id_message"></textarea> </div> </div>
-    
-    
-                    <button type="submit" class="button mt-4 text-center btn-warning d-block m-auto">Send
-                        message</button>
-    
-                </form>
+                    <input type="hidden" name="" value="">
+                    <!-- Name input -->
+                    <div id="div_id_name" class="control-group">
+                       <label for="id_name" class="control-label requiredField">
+                       Your name<span class="asteriskField">*</span> </label> 
+                       <div class="controls"> <input type="text" name="name" maxlength="50" class="textinput textInput" required="" id="id_name"> </div>
+                    </div>
+                    <!-- Email input  -->
+                    <div id="div_id_email" class="control-group">
+                       <label for="id_email" class="control-label requiredField">
+                       Email<span class="asteriskField">*</span> </label> 
+                       <div class="controls"> <input type="email" name="email" maxlength="50" class="emailinput" required="" id="id_email"> </div>
+                    </div>
+                    <!-- Textarea -->
+                    <div id="div_id_message" class="control-group">
+                       <label for="id_message" class="control-label requiredField">
+                       Message<span class="asteriskField">*</span> </label> 
+                       <div class="controls"> <textarea name="message" cols="40" rows="10" class="textarea" required="" id="id_message"></textarea> </div>
+                    </div>
+                    <!-- Button -->
+                    <button class="btn btn-warning btn-submit d-block m-auto mt-4">Send Message</button>
+                 </form>
             </div>
         </div>
     </div>
