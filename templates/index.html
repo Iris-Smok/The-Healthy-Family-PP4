@@ -25,66 +25,25 @@
 
 <div class="container">
     <div class="row">
+        {% for post in posts %}
       <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
         <div class="card card-recently-added">
-                <img src="../static/images/oranges.jpg" alt="" class="card-img-top">
-            <div class="card-body">
+          {% if "placeholder" in post.image.url %}
+                <img src="../static/images/oranges.jpg" alt="Oranges image" class="card-img-top" height="200">
+            {% else %}
+                <img class="card-img-top" height="200px" src=" {{ post.image.url }}" alt="">
+              {% endif %}
+                <div class="card-body">
                     <h5 class="card-title rec-card-title"></h5>
-                <p class="card-text">Recipe Title</p>
-                <p class="card-text">Author</p>
-                <div class="card-text">
-                    <span>Recipe description</span>
-                </div>
+                <p class="card-text">{{ post.title }}</p>
+                <p class="card-text">By: {{ post.author }}</p>
+                <p class="card-text"> {{ post.description|safe|truncatechars:70 }}</p>
                 <hr>
-                <div class="card-text"> Date</div>
+                <div class="card-text text-muted">{{ post.published_on}}</div>
             </div>
         </div>
-      </div>
-      <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
-        <div class="card card-recently-added">
-            <img src="../static/images/oranges.jpg" alt="" class="card-img-top">
-            <div class="card-body">
-                <h5 class="card-title rec-card-title"></h5>
-            <p class="card-text">Recipe Title</p>
-            <p class="card-text">Author</p>
-            <div class="card-text">
-                <span>Recipe description</span>
-            </div>
-            <hr>
-            <div class="card-text"> Date</div>
-        </div>
-    </div>
-      </div>
-      <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
-        <div class="card card-recently-added">
-            <img src="../static/images/oranges.jpg" alt="" class="card-img-top">
-            <div class="card-body">
-                <h5 class="card-title rec-card-title"></h5>
-            <p class="card-text">Recipe Title</p>
-            <p class="card-text">Author</p>
-            <div class="card-text">
-                <span>Recipe description</span>
-            </div>
-            <hr>
-            <div class="card-text"> Date</div>
-        </div>
-    </div>
-      </div>
-      <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
-        <div class="card card-recently-added">
-            <img src="../static/images/oranges.jpg" alt="" class="card-img-top">
-            <div class="card-body">
-                <h5 class="card-title rec-card-title"></h5>
-            <p class="card-text">Recipe Title</p>
-            <p class="card-text">Author</p>
-            <div class="card-text">
-                <span>Recipe description</span>
-            </div>
-            <hr>
-            <div class="card-text"> Date</div>
-        </div>
-    </div>
-      </div>
+      </div>     
+      {% endfor %}
     </div>
   </div>
 </section>
@@ -194,6 +153,12 @@
         </div>
     </div>
     
+</section>
+
+<section>
+{% for post in posts %}
+<p>{{ post.title }}</p>
+{% endfor %}
 </section>
 
 {%endblock%}
