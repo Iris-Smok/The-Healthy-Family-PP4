@@ -3,7 +3,7 @@ font-family: 'Oleo Script', cursive;
 font-family: 'Yanone Kaffeesatz', sans-serif; */
 
 body {
-    background-color: #F9FAFC;
+    background-color:#f9f9f9;
     font-family:'Mulish',sans-serif;
     font-weight: 500;
 }
@@ -72,15 +72,7 @@ hr{
 }
 
 
-/* FOOTER */
 
-footer {
-    font-size: 20px;
-}
-
-i{
-    font-size: 30px;
-}
 
 
 /* RECENTLY ADDED RECIPES SECTION*/
@@ -116,6 +108,39 @@ input, textarea{
     margin-top: 6rem;
 }
 
+/* FOOTER */
+
+footer {
+    font-size: 20px;
+    width: 100%;
+    /* position: absolute;
+    bottom: 0; */
+    text-align: center;
+}
+
+i{
+    font-size: 30px;
+}
+
+/* ACCOUNTS PAGES */
+
+.accounts-image{
+    background: url('../images/login-oranges.jpg') no-repeat center center;
+    background-size: cover;
+    height: 200px;
+    width: 100%;
+}
+
+.accounts-section-margin{
+    margin-bottom: 70px;
+    margin-top: 20px;
+}
+
+.form-style{
+    background-color: beige;
+    padding: 25px 10px;
+}
+
 /* 700px and up */
 @media only screen and (min-width: 768px){
 
@@ -138,6 +163,31 @@ input, textarea{
 
     .col-title{
         padding: 70px 70px;
+    }
+
+
+    .accounts-image{
+        background: url('../images/login-oranges.jpg') no-repeat center center;
+        background-size: cover;
+        height: 450px;
+        width: 100%;
+    }
+
+    .accounts-section-margin{
+        margin-top: 40px;
+    }
+
+    .image-padding{
+        padding-right: 0px;
+    }
+
+    .form-left-padding{
+        padding-left: 0;
+    }
+
+    .form-style{
+        padding: 25px 30px;
+        height: 450px;
     }
 
 }

@@ -17,3 +17,10 @@ class AllRecipes(TemplateView):
     all_recipes view
     """
     template_name='all_recipes.html'
+
+
+class LogIn(TemplateView):
+    """
+    all_recipes view
+    """
+    template_name='login.html'
