@@ -113,8 +113,6 @@ input, textarea{
 footer {
     font-size: 20px;
     width: 100%;
-    /* position: absolute;
-    bottom: 0; */
     text-align: center;
 }
 
@@ -169,7 +167,7 @@ i{
     .accounts-image{
         background: url('../images/login-oranges.jpg') no-repeat center center;
         background-size: cover;
-        height: 450px;
+        height: 100%;
         width: 100%;
     }
 
@@ -187,7 +185,7 @@ i{
 
     .form-style{
         padding: 25px 30px;
-        height: 450px;
+        height: 100%;
     }
 
 }

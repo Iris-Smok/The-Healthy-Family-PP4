@@ -24,3 +24,9 @@ class LogIn(TemplateView):
     all_recipes view
     """
     template_name='login.html'
+
+class Register(TemplateView):
+    """
+    all_recipes view
+    """
+    template_name='register.html'
