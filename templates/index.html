@@ -29,9 +29,9 @@
       <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
         <div class="card card-recently-added">
           {% if "placeholder" in post.image.url %}
-                <img src="../static/images/oranges.jpg" alt="Oranges image" class="card-img-top" height="200">
+                <img src="../static/images/oranges.jpg" alt="Oranges" class="card-img-top img-fit" height="200">
             {% else %}
-                <img class="card-img-top" height="200px" src=" {{ post.image.url }}" alt="">
+                <img class="card-img-top img-fit" height="200px" src=" {{ post.image.url }}" alt="{{ post.title}}">
               {% endif %}
                 <div class="card-body">
                     <h5 class="card-title rec-card-title"></h5>
