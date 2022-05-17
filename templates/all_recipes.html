@@ -18,7 +18,7 @@
                 {% for post in post_list %}
                 <div class="col-md-4">
                     <div class="card border-0 mb-4" style="background-color: #f9f9f9;">
-                        <a href="#" class="text-decoration-none text-reset">
+                        <a href="{% url 'recipe_details' post.slug %}" class="text-decoration-none text-reset">
                             <div class="card-body">
                                 <div class="image-container">
                                 {% if "placeholder" in post.image.url %}
