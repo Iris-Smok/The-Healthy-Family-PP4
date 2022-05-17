@@ -4,7 +4,8 @@ Views.py
 from django.shortcuts import render
 from django.views.generic import TemplateView
 from django.views import generic, View
-from .models import Recipe
+from django.db.models import Count
+from .models import Post
 
 
 class HomePage(View):
@@ -15,26 +16,25 @@ class HomePage(View):
 
     def get(self, request):
         """ get request """
-        recipes = Recipe.objects.order_by('-published_on')[:4]
+        posts = Post.objects.order_by('-published_on')[:4]
         context = {
-            "recipes": recipes,
+            "posts": posts,
         }
         return render(request, 'index.html', context)
 
 
 class AllRecipes(generic.ListView):
     """
-    all_recipes page
+    all_recipes view
     """
-    model = Recipe
-    queryset = Recipe.objects.order_by('-published_on')
+    model = Post
+    queryset = Post.objects.order_by('-published_on')
     template_name = 'all_recipes.html'
     paginate_by = 6
 
-
 class RecipeDetails(View):
     """ Recipe details page """
-
+    
 
 class LogIn(TemplateView):
     """

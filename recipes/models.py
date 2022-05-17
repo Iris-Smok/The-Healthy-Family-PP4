@@ -6,9 +6,9 @@ from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
 
 
-class Recipe(models.Model):
+class Post(models.Model):
     """
-    Recipe model
+    Post model
     """
     title = models.CharField(max_length=200, unique=True, blank=False)
     slug = models.SlugField(max_length=200, unique=True)
@@ -28,15 +28,19 @@ class Recipe(models.Model):
         ordering = ['-published_on']
 
     def __str__(self):
-        """ string title """
+        """
+        string title
+        """
         return self.title
-
+        
     def number_of_likes(self):
-        """ return total number of likes """
+        """ return number of likes"""
         return self.likes.count()
 
     def number_of_comments(self):
-        """ return comment count """
+        """
+        return comment count
+        """
         return self.comments.count()
 
 
@@ -44,7 +48,7 @@ class Comment(models.Model):
     """
     Comment class
     """
-    recipe = models.ForeignKey(Recipe, on_delete=models.CASCADE, related_name='comments_recipe_name')  # noqa
+    post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name='comments_post_name')  # noqa
     name = models.ForeignKey(User, on_delete=models.CASCADE, related_name='comments_name')  # noqa
     email = models.ForeignKey(User, on_delete=models.CASCADE, related_name='email_name')  # noqa
     body = models.TextField()

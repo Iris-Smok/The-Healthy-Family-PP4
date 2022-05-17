@@ -3,13 +3,13 @@ admin.py
 """
 from django.contrib import admin
 from django_summernote.admin import SummernoteModelAdmin
-from .models import Recipe, Comment
+from .models import Post, Comment
 
 
-@admin.register(Recipe)
+@admin.register(Post)
 class PostAdmin(SummernoteModelAdmin):
     """
-    Recipe class in admin panel
+    Post class in admin panel
     """
     list_display = ('title', 'published_on')
     prepopulated_fields = {'slug': ('title',)}
@@ -22,5 +22,5 @@ class CommentAdmin(admin.ModelAdmin):
     """
     Comment class in admin panel
     """
-    list_display = ('name', 'body', 'recipe', 'created_on')
+    list_display = ('name', 'body', 'post', 'created_on')
     search_fields = ('name', 'email', 'body')
