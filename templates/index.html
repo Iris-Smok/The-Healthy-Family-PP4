@@ -8,7 +8,7 @@
                     <h1 class="text-center title"> Welcome to The Healthy Family</h1>
                     <p class="display-6"> Perfect place to find and share healthy kid-friendly recipes</p>
                     <hr>
-                    <a href="{% url 'login' %}">
+                    <a href="#">
                     <button class="btn btn-warning btn-home-page">Login/Register</button>
                 </a>
             </div>
@@ -27,7 +27,7 @@
     <div class="row">
         {% for post in posts %}
       <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
-        <a href="#" class="text-decoration-none text-reset">
+        <a href="{% url 'recipe_details' post.slug %}" class="text-decoration-none text-reset">
         <div class="card card-recently-added">
           {% if "placeholder" in post.image.url %}
                 <img src="../static/images/oranges.jpg" alt="Oranges" class="card-img-top img-fit" height="200">
