@@ -1,10 +1,8 @@
 """
 Views.py
 """
-from django.shortcuts import render
-from django.views.generic import TemplateView
+from django.shortcuts import render, get_object_or_404
 from django.views import generic, View
-from django.db.models import Count
 from .models import Post
 
 
@@ -32,19 +30,23 @@ class AllRecipes(generic.ListView):
     template_name = 'all_recipes.html'
     paginate_by = 6
 
+
 class RecipeDetails(View):
     """ Recipe details page """
-    
 
-class LogIn(TemplateView):
-    """
-    all_recipes view
-    """
-    template_name = 'login.html'
+    def get(self, request, slug):
+        """What happens for a GET request"""
+        queryset = Post.objects.all()
+        post = get_object_or_404(queryset, slug=slug)
+        liked = False
+        if post.likes.filter(id=self.request.user.id).exists():
+            liked = True
 
-
-class Register(TemplateView):
-    """
-    all_recipes view
-    """
-    template_name = 'register.html'
+        return render(
+            request,
+            "recipe_details.html",
+            {
+                "post": post,
+                "liked": liked,
+            }
+        )
