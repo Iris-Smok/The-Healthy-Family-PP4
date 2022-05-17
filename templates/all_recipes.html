@@ -15,23 +15,23 @@
     <div class="row">
         <div class="col-12 mt-4">
             <div class="row">
-                {% for post in post_list %}
+                {% for recipe in recipe_list %}
                 <div class="col-md-4">
                     <div class="card border-0 mb-4" style="background-color: #f9f9f9;">
                         <a href="#" class="text-decoration-none text-reset">
                             <div class="card-body">
                                 <div class="image-container">
-                                {% if "placeholder" in post.image.url %}
+                                {% if "placeholder" in recipe.image.url %}
                                 <img src="../static/images/oranges.jpg" alt="Oranges" class="card-img-top img-fit" height="300">
                             {% else %}
-                                <img class="card-img-top img-fit" height="300px" src=" {{ post.image.url }}" alt="{{ post.title}}">
+                                <img class="card-img-top img-fit" height="300px" src=" {{ recipe.image.url }}" alt="{{ recipe.title}}">
                               {% endif %}
                                 </div>
-                                <h3 class="card-title">{{ post.title }}</h3>
-                                <p class="text-muted">by {{ post.author }}</p>
+                                <h3 class="card-title">{{ recipe.title }}</h3>
+                                <p class="text-muted">by {{ recipe.author }}</p>
                                 <hr />
-                                <p class="card-text text-muted h6">{{ post.published_on}} <i class="far fa-heart"></i>
-                                    {{ post.number_of_likes }}</p>
+                                <p class="card-text text-muted h6">{{ recipe.published_on}} <i class="far fa-heart"></i>
+                                    {{ recipe.number_of_likes }}</p>
                             </div>
                         </a>
                     </div>
