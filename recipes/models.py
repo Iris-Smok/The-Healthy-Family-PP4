@@ -28,15 +28,15 @@ class Post(models.Model):
         ordering = ['-published_on']
 
     def __str__(self):
-        """
-        string title
-        """
+        """ string title """
         return self.title
 
+    def number_of_likes(self):
+        """ return total number of likes """
+        return self.likes.count()
+
     def number_of_comments(self):
-        """
-        return comment count
-        """
+        """ return comment count """
         return self.comments.count()
 
 
