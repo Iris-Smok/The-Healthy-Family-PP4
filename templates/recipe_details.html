@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% load static %}
+
+<div class="container">
+    <div class="row no-gutters recipe-card-head mt-2">
+        <div class="col-md-6 my-auto">
+            <h1 class="recipe-title text-light"> {{ post.title }}</h1>
+            <p class="recipe-subtitle mb-3 mb-lg-0">by {{ post.author }} | <em>{{ post.published_on }}</em></p>
+        
+            
+        </div>
+        <div class="d-md-block col-lg-6 recipe-card-head-img">
+            {% if "placeholder" in post.image.url %}
+                <img src="../static/images/oranges.jpg" alt="Oranges" class="card-img-top img-fit">
+            {% else %}
+                <img class="card-img-top img-fit" src=" {{ post.image.url }}" alt="{{ post.title}}">
+              {% endif %}
+        </div>
+    </div>
+</div>
+
+<!-- <div class="container">
+    <div class="row recipe-card-head">
+        <div class="col-md-6 my-auto">
+            <h1 class="recipe-title my-3"> {{ post.title }}</h1>
+            <p class="mb-3 mb-lg-0">by {{ post.author }} | <em>{{ post.published_on }}</em></p>
+        </div>
+    <div class="col-md-6 p-0 recipe-card-head-img">
+            {% if "placeholder" in post.image.url %}
+            <img src="../static/images/oranges.jpg" alt="Oranges" class="card-img-top img-fit">
+        {% else %}
+            <img class="card-img-top img-fit" height="200px" src=" {{ post.image.url }}" alt="{{ post.title}}">
+          {% endif %}
+        </div>
+    </div>
+</div> -->
+
+
+
+
+{%endblock%}
