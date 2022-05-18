@@ -4,6 +4,7 @@
 
 {% load static %}
 
+<!-- RECIPE HEAD  -->
 <div class="container">
     <div class="row no-gutters recipe-card-head mt-2">
         <div class="col-md-6 my-auto">
@@ -21,24 +22,60 @@
         </div>
     </div>
 </div>
+<!-- END OF RECIPE HEAD -->
 
-<!-- <div class="container">
-    <div class="row recipe-card-head">
-        <div class="col-md-6 my-auto">
-            <h1 class="recipe-title my-3"> {{ post.title }}</h1>
-            <p class="mb-3 mb-lg-0">by {{ post.author }} | <em>{{ post.published_on }}</em></p>
-        </div>
-    <div class="col-md-6 p-0 recipe-card-head-img">
-            {% if "placeholder" in post.image.url %}
-            <img src="../static/images/oranges.jpg" alt="Oranges" class="card-img-top img-fit">
-        {% else %}
-            <img class="card-img-top img-fit" height="200px" src=" {{ post.image.url }}" alt="{{ post.title}}">
-          {% endif %}
+<!-- MAIN RECIPE CONTENT -->
+<div class="container">
+    <div class="row">
+        <div class="col border-0 card mb-4 mt-3 recipes-content-body">
+            <div class="card-body">
+                <p>{{ post.description|striptags }}</p>
+                <hr />
+                <h3>Ingredients:</h3>
+                <p class="card-text ">{{ post.ingredients | safe }} </p>
+                <hr />
+                <h3>Method:</h3>
+                <p class="card-text ">{{ post.preparation_steps | safe }}</p>
+                <hr />
+            </div>
         </div>
     </div>
-</div> -->
+</div>
+<!-- END OF MAIN RECIPE CONTENT -->
 
+<!-- LIKES AND COMMENT COUNT -->
+<!-- Recipe likes and Comments Counter -->
+<div class="container">
+    <div class="row">
+        <!-- Like counter -->
+        <div class="col-4 col-sm-2 col-xl-1" >
+                {% if user.is_authenticated %}
+                <form class="d-inline" action="{% url '#' post.slug %}" method="POST">
+                    {% csrf_token %}
+                    {% if liked %}
+                    <button type="submit" value="{{ post.slug }}" class="btn-like">
+                        <i class="fas fa-heart"></i>
+                    </button>
+                    {% else %}
+                    <button type="submit" value="{{ post.slug }}" class="btn-like">
+                        <i class="far fa-heart"></i></button>
+                    {% endif %}
+                </form>
+                {% else %}
+                <span class="text-secondary"><i class="far fa-heart"></i></span>
+                {% endif %}
+                <strong>{{ post.number_of_likes }}</strong>
+        </div>
+        <!-- Comment Counter -->
+        <div class="col-4">
+            <strong class="text-secondary"><i class="far fa-comments"></i>
+                {{ post.number_of_comments }}
+            </strong>
+        </div>
+    </div>
+</div>
 
+<!-- END OF LIKES AND COMMENT COUNT -->
 
 
 {%endblock%}
