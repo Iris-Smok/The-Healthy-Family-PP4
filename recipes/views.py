@@ -50,3 +50,4 @@ class RecipeDetails(View):
                 "liked": liked,
             }
         )
+
