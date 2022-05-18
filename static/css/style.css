@@ -139,21 +139,13 @@ footer > p > i{
     padding: 25px 10px;
 }
 
+/* ALL RECIPES PAGE */
+
+.all-recipes-cards{
+    background-color: #f9f9f9;
+}
+
 /* POST DETAILS PAGE */
-/* .recipe-card-head{
-    background-color: slategray;
-    color:#fff ;
-    height: 33vh;
-}
-
-.recipe-card-head p{
-    color: lightgray;
-}
-
-.recipe-card-head-img > img{
-    height: 33vh;
-} */
-
 
 .recipe-card-head {
     background-color: slategray;
