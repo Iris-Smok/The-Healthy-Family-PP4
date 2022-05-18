@@ -139,6 +139,42 @@ footer > p > i{
     padding: 25px 10px;
 }
 
+/* POST DETAILS PAGE */
+/* .recipe-card-head{
+    background-color: slategray;
+    color:#fff ;
+    height: 33vh;
+}
+
+.recipe-card-head p{
+    color: lightgray;
+}
+
+.recipe-card-head-img > img{
+    height: 33vh;
+} */
+
+
+.recipe-card-head {
+    background-color: slategray;
+    height: 33vh;
+}
+
+.recipe-card-head-img > img{
+    height: 33vh;
+}
+
+.recipe-title {
+    margin-left: 5%;
+    margin-top: 15px;
+}
+
+.recipe-subtitle {
+    margin-left: 5%;
+    margin-bottom: 0;
+    color: lightgray;
+}
+
 
 /* 700px and up */
 @media only screen and (min-width: 768px){
@@ -187,6 +223,10 @@ footer > p > i{
     .form-style{
         padding: 25px 30px;
         height: 100%;
+    }
+
+    .recipe-title{
+        margin-top: 10px;
     }
 
 }
