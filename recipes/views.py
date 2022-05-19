@@ -55,7 +55,7 @@ class RecipeDetails(View):
         )
 
 
-class PostLike(View):
+class RecipeLike(View):
     """
     like and unlike post class
     """
