@@ -1,8 +1,9 @@
 """
 Views.py
 """
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
+from django.http import HttpResponseRedirect
 from .models import Post
 
 
@@ -53,3 +54,19 @@ class RecipeDetails(View):
             }
         )
 
+
+class PostLike(View):
+    """
+    like and unlike post class
+    """
+    def post(self, request, slug):
+        """
+        like and unlike posts
+        """
+        post = get_object_or_404(Post, slug=slug)
+
+        if post.likes.filter(id=request.user.id).exists():
+            post.likes.remove(request.user)
+        else:
+            post.likes.add(request.user)
+        return HttpResponseRedirect(reverse('recipe_details', args=[slug]))
