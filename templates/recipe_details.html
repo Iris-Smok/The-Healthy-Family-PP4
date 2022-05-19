@@ -48,7 +48,7 @@
         <!-- Like counter -->
         <div class="col-4 col-sm-2 col-xl-1" >
                 {% if user.is_authenticated %}
-                <form class="d-inline" action="#" method="POST">
+                <form class="d-inline" action="{% url 'recipe_like' post.slug %}" method="POST">
                     {% csrf_token %}
                     {% if liked %}
                     <button type="submit" value="{{ post.slug }}" class="btn-like border-0">
