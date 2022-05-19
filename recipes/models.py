@@ -19,7 +19,6 @@ class Post(models.Model):
     preparation_steps = models.TextField()
     image = CloudinaryField('image', default='placeholder')
     likes = models.ManyToManyField(User, related_name='blog_likes', blank=True)
-    comments = models.ManyToManyField(User, related_name='blog_comments', blank= True)  # noqa
 
     class Meta:
         """
@@ -37,12 +36,6 @@ class Post(models.Model):
         """ return number of likes"""
         return self.likes.count()
 
-    def number_of_comments(self):
-        """
-        return comment count
-        """
-        return self.comments.count()
-
 
 class Comment(models.Model):
     """
@@ -52,7 +45,7 @@ class Comment(models.Model):
     name = models.ForeignKey(User, on_delete=models.CASCADE, related_name='comments_name')  # noqa
     email = models.ForeignKey(User, on_delete=models.CASCADE, related_name='email_name')  # noqa
     body = models.TextField()
-    created_on = models.DateField(auto_now_add=True)
+    created_on = models.DateTimeField(auto_now_add=True)
 
     class Meta:
         """
