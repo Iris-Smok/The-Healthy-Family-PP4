@@ -8,6 +8,9 @@ body {
     font-weight: 500;
 }
 
+.card{
+    background-color: #f9f9f9;
+}
 /* NAVBAR */
 
 
@@ -80,6 +83,7 @@ hr{
 .card-recently-added{
     margin: 0 auto;
     margin-bottom: 30px;
+    background-color: fff;
 }
 
 .img-fit{
