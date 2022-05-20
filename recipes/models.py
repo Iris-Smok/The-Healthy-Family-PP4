@@ -42,8 +42,8 @@ class Comment(models.Model):
     Comment class
     """
     post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name='comments_post_name')  # noqa
-    name = models.ForeignKey(User, on_delete=models.CASCADE, related_name='comments_name')  # noqa
-    email = models.ForeignKey(User, on_delete=models.CASCADE, related_name='email_name')  # noqa
+    name = models.CharField(max_length=80)
+    email = models.EmailField()
     body = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
 
