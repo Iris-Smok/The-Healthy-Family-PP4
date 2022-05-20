@@ -3,7 +3,7 @@ Views.py
 """
 from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
-from django.views.generic import CreateView, UpdateView
+from django.views.generic import UpdateView
 from django.http import HttpResponseRedirect
 from .models import Post, Comment
 from .forms import CommentForm
@@ -65,7 +65,7 @@ class RecipeDetails(View):
         liked = False
         if post.likes.filter(id=self.request.user.id).exists():
             liked = True
-        
+
         comment_form = CommentForm(data=request.POST)
 
         if comment_form.is_valid():
@@ -90,6 +90,14 @@ class RecipeDetails(View):
         )
 
 
+def delete_comment(request, comment_id):
+    """Deletes comment"""
+    comment = get_object_or_404(Comment, id=comment_id)
+    comment.delete()
+    return HttpResponseRedirect(reverse(
+        'recipe_details', args=[comment.post.slug]))
+
+
 class RecipeLike(View):
     """
     like and unlike post class
@@ -105,4 +113,3 @@ class RecipeLike(View):
         else:
             post.likes.add(request.user)
         return HttpResponseRedirect(reverse('recipe_details', args=[slug]))
-
