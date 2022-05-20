@@ -45,8 +45,11 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'cloudinary',
     'django_summernote',
+    'crispy_forms',
     'recipes',
 ]
+
+CRISPY_TEMPLATES_PACK = 'bootstrap4'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
