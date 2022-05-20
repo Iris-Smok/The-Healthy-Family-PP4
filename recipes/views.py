@@ -3,8 +3,9 @@ Views.py
 """
 from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
+from django.views.generic import CreateView, UpdateView
 from django.http import HttpResponseRedirect
-from .models import Post
+from .models import Post, Comment
 from .forms import CommentForm
 
 
@@ -53,7 +54,7 @@ class RecipeDetails(View):
                 "comments": comments,
                 "liked": liked,
                 "comment_form": CommentForm()
-            },
+            }
         )
 
     def post(self, request, slug):
@@ -73,6 +74,7 @@ class RecipeDetails(View):
             comment = comment_form.save(commit=False)
             comment.post = post
             comment.save()
+            return HttpResponseRedirect(reverse('recipe_details', args=[slug]))
         else:
             comment_form = CommentForm()
 
@@ -103,3 +105,4 @@ class RecipeLike(View):
         else:
             post.likes.add(request.user)
         return HttpResponseRedirect(reverse('recipe_details', args=[slug]))
+
