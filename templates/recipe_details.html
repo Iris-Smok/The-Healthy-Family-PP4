@@ -1,8 +1,6 @@
-{% extends "base.html" %}
+{% extends "base.html" %} {% block content %}
 
-{% block content %}
-
-{% load static %}
+{% load crispy_forms_tags%}
 
 <!-- RECIPE HEAD  -->
 <div class="container">
@@ -28,7 +26,7 @@
 <div class="container">
     <div class="row">
         <div class="col border-0 card mb-4 mt-3 recipes-content-body">
-            <div class="card-body">
+            <div class="card-body px-0">
                 <p>{{ post.description|striptags }}</p>
                 <hr />
                 <h3>Ingredients:</h3>
@@ -83,7 +81,7 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-md-8 card border-0 mb-4  mt-3 ">
+        <div class="col card border-0 mb-4 mt-3 ">
             <h3>Comments:</h3>
             <div class="card-body">
                 <!-- We want a for loop inside the tags to iterate through each comment in comments -->
@@ -104,6 +102,21 @@
                 {% endfor %}
             </div>
         </div>
+        <div class="col-md-8 card border-0 mb-4 mt-3 ">
+            <div class="card-body pt-0">
+            
+                {% if user.is_authenticated %}
+                <h3>Leave a comment:</h3>
+                <p>Posting as: {{ user.username }}</p>
+                <form method="post" style="margin-top: 1.3em;">
+                    {{ comment_form | crispy }}
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-signup btn-warning btn-lg">Submit</button>
+                </form>
+                {% endif %}
+            </div>
+            </div>
+            </div>
 </div>
 
 
