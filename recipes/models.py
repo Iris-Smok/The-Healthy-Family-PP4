@@ -3,6 +3,7 @@ models.py
 """
 from django.db import models
 from django.contrib.auth.models import User
+from django.urls import reverse
 from cloudinary.models import CloudinaryField
 
 
@@ -31,7 +32,7 @@ class Post(models.Model):
         string title
         """
         return self.title
-        
+
     def number_of_likes(self):
         """ return number of likes"""
         return self.likes.count()
@@ -55,3 +56,7 @@ class Comment(models.Model):
 
     def __str__(self):
         return f"Comment {self.body} by {self.name}"
+
+    def get_absolute_url(self):
+        """Sets absolute URL"""
+        return reverse('recipe_details', args=[self.post.slug])
