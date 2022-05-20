@@ -89,7 +89,7 @@
                {{ comment.body | linebreaks }}
             </div>
             {% if user.is_authenticated and user.username == comment.name %}
-            <a href="#"><button class="btn-sm btn-success ">Edit</button></a>
+            <a href="{% url 'edit_comment' comment.id %}"><button class="btn-sm btn-success ">Edit</button></a>
             <button type="button" class="btn-sm btn-danger" data-toggle="modal" data-target="#myModal">Delete</button>
             <!-- Modal -->
             <div id="myModal" class="modal fade" role="dialog">
