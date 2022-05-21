@@ -83,9 +83,10 @@
           </li>
 
           <!--IF USER IS AUTHENTICATED-->
-          <!-- <li class="nav-item dropdown">
+          {% if user.is_authenticated %}
+          <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Hi username
+            Hi {{ user.username }}
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <a class="dropdown-item" href="#">Favourite Recipes</a>
@@ -93,7 +94,8 @@
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="#">Logout</a>
           </div>
-        </li> -->
+        </li>
+        {% endif %}
         </ul>
         <form class="form-inline my-2 my-lg-0">
           <input
