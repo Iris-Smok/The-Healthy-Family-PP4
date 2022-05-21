@@ -5,8 +5,11 @@ from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
 from django.views.generic import UpdateView
 from django.http import HttpResponseRedirect
+from django.contrib.auth.models import User
+from django.core.paginator import Paginator, EmptyPage
 from .models import Post, Comment
 from .forms import CommentForm
+
 
 
 class HomePage(View):
@@ -120,3 +123,15 @@ class RecipeLike(View):
         else:
             post.likes.add(request.user)
         return HttpResponseRedirect(reverse('recipe_details', args=[slug]))
+
+
+def your_recipes(request):
+    """your_recipes view"""
+    post = Post.objects.filter(author=request.user)
+
+    paginator = Paginator(post, 6) # Show 6 recipes per page
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
+    return render(request, 'your_recipes.html', {"page_obj": page_obj,})
+    
+
