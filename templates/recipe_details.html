@@ -91,6 +91,7 @@
             {% if user.is_authenticated and user.username == comment.name %}
             <a href="{% url 'edit_comment' comment.id %}"><button class="btn-sm btn-success ">Edit</button></a>
             <button type="button" class="btn-sm btn-danger" data-toggle="modal" data-target="#myModal">Delete</button>
+            
             <!-- Modal -->
             <div id="myModal" class="modal fade" role="dialog">
                <div class="modal-dialog">
@@ -100,7 +101,7 @@
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                      </div>
                      <div class="modal-body">
-                        <h4>Are you sure you wnat to delete this comment?</h4>
+                        <h4>Are you sure you want to delete this comment?</h4>
                         <p>This action cannot be undone.</p>
                      </div>
                      <div class="modal-footer">
