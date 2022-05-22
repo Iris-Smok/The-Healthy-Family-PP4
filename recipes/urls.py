@@ -15,5 +15,5 @@ urlpatterns = [
     path('delete_comment/<int:comment_id>',
          views.delete_comment, name='delete_comment'),
     path('your_recipes', views.YourRecipes.as_view(), name='your_recipes'),
-
+    path('add_recipe', views.AddRecipe.as_view(), name='add_recipe'),
 ]
