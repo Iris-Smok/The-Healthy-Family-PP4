@@ -3,12 +3,12 @@ Views.py
 """
 from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
-from django.views.generic import UpdateView
+from django.views.generic import UpdateView, CreateView
 from django.http import HttpResponseRedirect
 from django.contrib.auth.models import User
 from django.core.paginator import Paginator, EmptyPage
 from .models import Post, Comment
-from .forms import CommentForm
+from .forms import CommentForm, RecipeForm
 
 
 
@@ -136,3 +136,46 @@ class YourRecipes(View):
         page_obj = paginator.get_page(page_number)
         return render(request, 'your_recipes.html', {"page_obj": page_obj,})
 
+        
+class AddRecipe(View):
+
+    def get(self, request):
+        """What happens for a GET request"""
+        return render(request,
+            "add_recipe.html",
+            {
+                "recipe_form": RecipeForm()
+            }
+        )
+
+    # def post(self, request, slug):
+    #     """What happens for a POST request"""
+    #     queryset = Post.objects.all()
+    #     post = get_object_or_404(queryset, slug=slug)
+    #     comments = post.comments_post_name.order_by('created_on')
+    #     liked = False
+    #     if post.likes.filter(id=self.request.user.id).exists():
+    #         liked = True
+
+    #     comment_form = CommentForm(data=request.POST)
+
+    #     if comment_form.is_valid():
+    #         comment_form.instance.email = request.user.email
+    #         comment_form.instance.name = request.user.username
+    #         comment = comment_form.save(commit=False)
+    #         comment.post = post
+    #         comment.save()
+    #         return HttpResponseRedirect(reverse('recipe_details', args=[slug]))
+    #     else:
+    #         comment_form = CommentForm()
+
+    #     return render(
+    #         request,
+    #         "recipe_details.html",
+    #         {
+    #             "post": post,
+    #             "comments": comments,
+    #             "liked": liked,
+    #             "comment_form": CommentForm()
+    #         }
+    #     )
