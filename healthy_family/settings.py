@@ -51,6 +51,8 @@ INSTALLED_APPS = [
 
 CRISPY_TEMPLATES_PACK = 'bootstrap4'
 
+SUMMERNOTE_THEME = 'bs4'
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -146,3 +148,14 @@ DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'  # no
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+SUMMERNOTE_CONFIG = {
+    # Change editor size
+    # instructions taken from https://github.com/summernote/django-summernote
+    'width': '100%',
+    'height': '480',
+    'toolbar': [
+            ['font', ['bold', 'underline', 'italic', 'clear']],
+            ['para', ['ul', 'ol']],
+        ],
+}
