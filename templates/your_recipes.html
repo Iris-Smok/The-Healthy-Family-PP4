@@ -43,11 +43,29 @@
                               <span>
                               <a href="{% url 'edit_recipe' post.id %}"><button class="btn-sm btn-success ">Edit</button></a></span>
                               <span>
-                              <button type="button" class="btn-sm btn-danger" data-toggle="modal" data-target="#myModal">Delete</button>
+                              <button type="button" class="btn-sm btn-danger" data-toggle="modal" data-target="#deleteModal{{post.id}}">Delete</button>
                               </span>
                               <!-- END OF BUTTONS -->
                         </div>
-                      
+                            <!-- Modal -->
+            <div id="deleteModal{{post.id}}" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+                   <!-- Modal content-->
+                   <div class="modal-content">
+                      <div class="modal-header">
+                         <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      </div>
+                      <div class="modal-body">
+                         <h4>Are you sure you want to delete the recipe {{ post.title }}?</h4>
+                         <p>This action cannot be undone.</p>
+                      </div>
+                      <div class="modal-footer">
+                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                         <a href="{% url 'delete_recipe' post.id %}" class="btn btn-danger">Delete</a>
+                      </div>
+                   </div>
+                </div>
+             </div>   
                     </div>
                 </div>
             {% if forloop.counter|divisibleby:3 %}
