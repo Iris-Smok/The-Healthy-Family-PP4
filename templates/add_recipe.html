@@ -1,7 +1,11 @@
 {% extends "base.html" %}
 
 {% block content %}
+
+{% load cloudinary %}
+
 {% load crispy_forms_tags%}
+
 
 <div class="container">
     <div class="row">
@@ -15,25 +19,14 @@
 <div class="container">
     <div class="row">
         <div class="col-10 mt-3 offset-1 g-0">
-            <form class="signup" id="add_recipe_form" method="post" enctype="multipart/form-data">
+            <form method="POST" enctype="multipart/form-data">
                 {% csrf_token %}
-                {{ recipe_form }}
+                {{ recipe_form|crispy}}
                 <button class="btn btn-secondary right mb-2" type="submit" value="Save">Add Recipe</button>
             </form>
         </div>
     </div>
 </div>
-
-<!-- <div class="col-md-8 card border-0 mb-4 mt-3 ">
-    <div class="card-body pt-0">
-       {% if user.is_authenticated %}
-       <form method="post" style="margin-top: 1.3em;">
-          {{ recipe_form | crispy }}
-          {% csrf_token %}
-          <button type="submit" class="btn btn-signup btn-warning btn-lg">Add Recipe</button>
-       </form>
-       {% endif %}
-    </div> -->
  
 
 
