@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% load cloudinary %}
+
+{% if user.is_authenticated and user.id == post.author.id %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-8 offset-2 text-center mt-5">
+            <h2>Edit Recipe</h2>
+            <hr>
+        </div>
+    </div>
+<div class="row">
+    <div class="col mt-3 text-center">
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_p}}
+
+            <button class="btn btn-success right mb-2" type="submit" >Edit Post<i class="fas fa-edit ml-3"></i></button>
+        </form>
+    </div>
+  </div>
+</div>
+
+
+{% endif %}
+
+
+{%endblock%}
