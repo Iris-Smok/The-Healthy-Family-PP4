@@ -16,4 +16,6 @@ urlpatterns = [
          views.delete_comment, name='delete_comment'),
     path('your_recipes', views.YourRecipes.as_view(), name='your_recipes'),
     path('add_recipe', views.AddRecipe.as_view(), name='add_recipe'),
+    path('edit_recipe/<int:pk>',
+         views.EditRecipe.as_view(), name='edit_recipe'),
 ]
