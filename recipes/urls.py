@@ -18,4 +18,6 @@ urlpatterns = [
     path('add_recipe', views.AddRecipe.as_view(), name='add_recipe'),
     path('edit_recipe/<int:pk>',
          views.EditRecipe.as_view(), name='edit_recipe'),
+    path('delete_recipe/<int:post_id>',
+         views.delete_recipe, name='delete_recipe'),
 ]
