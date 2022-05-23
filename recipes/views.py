@@ -166,6 +166,7 @@ class AddRecipe(View):
             },
         )
 
+
 class EditRecipe(UpdateView):
     """ Edit Recipe """
     model = Post
@@ -173,9 +174,10 @@ class EditRecipe(UpdateView):
     form_class = RecipeForm
 
 
-# def delete_comment(request, comment_id):
-#     """Deletes comment"""
-#     comment = get_object_or_404(Comment, id=comment_id)
-#     comment.delete()
-#     return HttpResponseRedirect(reverse(
-#         'recipe_details', args=[comment.post.slug]))
+
+def delete_recipe(request, post_id):
+    """Deletes recipe"""
+    post = get_object_or_404(Post, id=post_id)
+    post.delete()
+    return redirect(reverse(
+        'your_recipes'))
