@@ -10,12 +10,12 @@
                     <hr>
                     {% if user.is_authenticated %}
                     <a href="{% url 'account_logout' %}">
-                        <button class="btn btn-warning btn-home-page">Logout</button>
+                        <button class="btn btn-warning btn-login-register">Logout</button>
                     </a>
 
                     {% else %}
                     <a href="{% url 'account_login' %}">
-                        <button class="btn btn-warning btn-home-page">Login/Register</button>
+                        <button class="btn btn-warning btn-login-register">Login/Register</button>
                     </a>
                     {% endif %}
    
