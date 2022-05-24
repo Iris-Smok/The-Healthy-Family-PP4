@@ -66,7 +66,7 @@ body {
     font-family: 'Patrick Hand', sans-serif;
 }
 
-.btn-home-page{
+.btn-login-register{
     padding: 10px;
 }
 
@@ -192,6 +192,11 @@ footer > p > i{
 
 #id_remember{
     width: inherit;
+}
+
+.logout-img > img {
+    height: 30vh;
+    width: 100%;
 }
 
 /* 700px and up */
