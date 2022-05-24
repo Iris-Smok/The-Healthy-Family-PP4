@@ -3,19 +3,24 @@ Views.py
 """
 from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic, View
-from django.views.generic import UpdateView, CreateView
+from django.views.generic import UpdateView
 from django.utils.text import slugify
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect, HttpResponse
+from django.core.mail import send_mail, BadHeaderError
 from django.contrib.auth.models import User
 from django.core.paginator import Paginator
 from .models import Post, Comment
-from .forms import CommentForm, RecipeForm
+from .forms import CommentForm, RecipeForm, ContactForm
 
 
 class HomePage(View):
     """
     Home page view
-    view for last added recipes and most loved recipes sections
+    view for last added recipes,most loved recipes sections
+    and contact form
+    I followed instructions from django documentation and
+    https://ordinarycoders.com/blog/article/build-a-django-contact-form-with-email-backend
+    to create the contact form
     """
 
     def get(self, request):
@@ -23,8 +28,30 @@ class HomePage(View):
         posts = Post.objects.order_by('-published_on')[:4]
         context = {
             "posts": posts,
+            "contact_form": ContactForm()
         }
         return render(request, 'index.html', context)
+
+    def post(self, request):
+        contact_form = ContactForm(request.POST)
+        if contact_form.is_valid():
+            subject = "Website Inquiry"
+            sender = contact_form.cleaned_data['email_address'],
+            recipients = ['RECIPIENTS_EMAIL'] 
+            body = {
+                'first_name': contact_form.cleaned_data['first_name'],
+                'last_name': contact_form.cleaned_data['last_name'],
+                'message': contact_form.cleaned_data['message'],
+                }
+            message = "\n".join(body.values())
+            try:
+                send_mail(subject, message, sender, recipients)
+            except BadHeaderError:
+                return HttpResponse('Invalid header found.')
+            return redirect('/')
+
+        contact_form = ContactForm()
+        return render(request, 'index.html', {'contact_form': contact_form})
 
 
 class AllRecipes(generic.ListView):
@@ -174,10 +201,11 @@ class EditRecipe(UpdateView):
     form_class = RecipeForm
 
 
-
 def delete_recipe(request, post_id):
     """Deletes recipe"""
     post = get_object_or_404(Post, id=post_id)
     post.delete()
     return redirect(reverse(
         'your_recipes'))
+
+
