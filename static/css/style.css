@@ -174,9 +174,26 @@ footer > p > i{
     background-color: #f9f9f9;
 }
 
+
+
+
 .pagination{
     display:block;
 }
+
+.login-register-bg{
+    background-color: rgb(241 227 207);
+}
+
+.login-img > img {
+    height: 33vh;
+    width: 100%;
+}
+
+#id_remember{
+    width: inherit;
+}
+
 /* 700px and up */
 @media only screen and (min-width: 768px){
 
@@ -229,6 +246,12 @@ footer > p > i{
     .recipe-title{
         margin-top: 10px;
     }
+
+    .login-img > img {
+        height: 50vh;
+        width: 100%;
+    }
+    
 
 }
 
