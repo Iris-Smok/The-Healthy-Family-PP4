@@ -35,8 +35,10 @@ body {
     width: fit-content;
     }
 
-
-
+.dropdown-item:hover { 
+    background-color:rgb(255 193 7) !important;
+    border-radius: 15px;
+    }
 
 /* HERO IMAGE */
 
