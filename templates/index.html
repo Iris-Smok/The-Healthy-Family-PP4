@@ -1,6 +1,8 @@
 {% extends "base.html" %}
 
 {% block content %}
+
+{% load crispy_forms_tags%}
 <section>
     <div class="container-fluid hero-image">
         <div class="row">
@@ -122,7 +124,7 @@
 
  <!-- CONTACT US -->
 <section>
-    <div class="container-fluid contact-background" id="contact-form">
+    <div class="container-fluid contact-background">
         <div class="row d-flex justify-content-center pt-5">
 
             <!-- Contact title -->
@@ -135,34 +137,18 @@
         <div class="row d-flex justify-content-center">
             <div class="col-sm-4 col-md-6">
 
-                <form method="POST" class="contact-form full-form mb-5">
-                    <input type="hidden" name="" value="">
-                    <!-- Name input -->
-                    <div id="div_id_name" class="control-group">
-                       <label for="id_name" class="control-label requiredField">
-                       Your name<span class="asteriskField">*</span> </label> 
-                       <div class="controls"> <input type="text" name="name" maxlength="50" class="textinput textInput" required="" id="id_name"> </div>
-                    </div>
-                    <!-- Email input  -->
-                    <div id="div_id_email" class="control-group">
-                       <label for="id_email" class="control-label requiredField">
-                       Email<span class="asteriskField">*</span> </label> 
-                       <div class="controls"> <input type="email" name="email" maxlength="50" class="emailinput" required="" id="id_email"> </div>
-                    </div>
-                    <!-- Textarea -->
-                    <div id="div_id_message" class="control-group">
-                       <label for="id_message" class="control-label requiredField">
-                       Message<span class="asteriskField">*</span> </label> 
-                       <div class="controls"> <textarea name="message" cols="40" rows="10" class="textarea" required="" id="id_message"></textarea> </div>
-                    </div>
-                    <!-- Button -->
-                    <button class="btn btn-warning btn-submit d-block m-auto mt-4">Send Message</button>
-                 </form>
+                <form method="post">
+                    {% csrf_token %}
+                        {{contact_form|crispy}}
+                        <button type="submit">Submit</button>
+                    </form>
             </div>
         </div>
     </div>
+
     
 </section>
+
 
 
 {%endblock%}
