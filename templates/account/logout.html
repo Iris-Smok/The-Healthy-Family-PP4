@@ -1,11 +1,29 @@
-{% extends "account/base.html" %}
+{% extends "base.html" %}
 
 {% load i18n %}
 
 {% block head_title %}{% trans "Sign Out" %}{% endblock %}
 
 {% block content %}
-<h1>{% trans "Sign Out" %}</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-8 offset-2 text-center mt-5">
+        <h2>{% trans "Sign Out" %}</h2>
+        <hr>
+    </div>
+  </div>
+  </div>
+
+  <div class="container">
+    <div class="row no-gutters mt-2 login-register-bg text-center">
+       <div class="col-sm-5 col-md-4 logout-img">
+        <img  src="../../static/images/oranges.jpg" class="img-fit" alt="Oranges">
+       </div>
+
+       <div class="col-sm-7 col-md-8 m-auto p-4">
+
+    
+  
 
 <p>{% trans 'Are you sure you want to sign out?' %}</p>
 
@@ -14,8 +32,10 @@
   {% if redirect_field_value %}
   <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"/>
   {% endif %}
-  <button type="submit">{% trans 'Sign Out' %}</button>
+  <button class="btn btn-warning btn-login-register" type="submit">{% trans 'Sign Out' %}</button>
 </form>
-
+      </div>
+    </div>
+  </div>
 
 {% endblock %}
