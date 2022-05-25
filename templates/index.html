@@ -124,7 +124,7 @@
 
  <!-- CONTACT US -->
 <section>
-    <div class="container-fluid contact-background">
+    <div class="container-fluid contact-background mb-5">
         <div class="row d-flex justify-content-center pt-5">
 
             <!-- Contact title -->
@@ -137,10 +137,12 @@
         <div class="row d-flex justify-content-center">
             <div class="col-sm-4 col-md-6">
 
-                <form method="post">
+                <form method="post text-center">
                     {% csrf_token %}
                         {{contact_form|crispy}}
-                        <button type="submit">Submit</button>
+                        <div class="text-center">
+                        <button class="btn btn-warning btn-login-register" type="submit">Submit</button>
+                    </div>
                     </form>
             </div>
         </div>
