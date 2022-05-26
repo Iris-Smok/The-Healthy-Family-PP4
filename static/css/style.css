@@ -103,8 +103,17 @@ footer {
     width: 100%;
     text-align: center;
 }
-footer > p > i{
+
+.footer a {
+    color: #343a40;
+    
+}
+
+.social-links {
+    margin: 0;
+    text-align: center;
     font-size: 30px;
+    
 }
 
 
