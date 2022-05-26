@@ -112,6 +112,24 @@
     </nav>
     <!--NAVBAR END-->
 
+    <!-- MESSAGE  -->
+
+    <div class="container">
+      <div class="row">
+          <div class="col-md-8 offset-md-2">
+            {% for message in messages %}
+            <div class="alert {{message.tags}} alert-dismissible fade show mt-2" id="msg" role="alert">
+              {{message|safe}}
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            {% endfor %}
+          </div>
+      </div>
+  </div>
+    <!-- END OF THE MESSAGE SECTION -->
+
     {% block content %}
     <!-- Content Goes here -->
     {% endblock content %}
@@ -127,6 +145,16 @@
     </footer>
 
     <!--FOOTER END-->
+
+       <!-- SCRIPT FOR MESSAGES 
+      from Code Institute Django project -->
+   <script>
+    setTimeout(function (){
+        let messages = document.getElementById("msg");
+        let alert = new bootstrap.Alert(messages);
+        alert.close();
+    }, 3000);
+</script>
 
     <!--BOOTSTRAP-->
     <script
@@ -145,6 +173,6 @@
       crossorigin="anonymous"
     ></script>
 
-    <script src="../static/js/scripts.js"></script>
+
   </body>
 </html>
