@@ -84,36 +84,17 @@
                 <div class="col-6 offset-3">
                 </div>
                 <ol class="lead pl-4">
-                    
+                    {% for liked_recipe in liked_recipes %}
                     <li>
-                        <a href="#" class="recipe-link text-reset">Recipe Title </a>
-                        <hr>
+                        <a class="text-reset" href="{% url 'recipe_details' liked_recipe.slug %}"
+                            class="recipe-link">{{ liked_recipe.title}} </a>
+                        <hr />
                     </li>
-                    
-                    <li>
-                        <a href="#" class="recipe-link text-reset">Recipe Title</a>
-                        <hr>
-                    </li>
-                    
-                    <li>
-                        <a href="#" class="recipe-link text-reset">Recipe Title</a>
-                        <hr>
-                    </li>
-                    
-                    <li>
-                        <a href="#" class="recipe-link text-reset">Recipe Title</a>
-                        <hr>
-                    </li>
-                    
-                    <li>
-                        <a href="#" class="recipe-link text-reset">Recipe Title</a>
-                        <hr>
-                    </li>
-                    
+                    {% endfor %}
                 </ol>
                 <br>
                 <p class="lead text-center">
-                    <a href="#" class="recipe-link text-reset">View all recipes</a>
+                    <a href="{% url 'all_recipes' %}" class="recipe-link text-reset">View all recipes</a>
                 </p>
             </div>
         </div>
