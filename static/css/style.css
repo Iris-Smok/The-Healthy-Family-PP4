@@ -1,51 +1,43 @@
-/* font-family: 'Mulish', sans-serif;
-font-family: 'Oleo Script', cursive;
-font-family: 'Yanone Kaffeesatz', sans-serif; */
 
-body {
+ body {
     background-color:#f9f9f9;
     font-family:'Mulish',sans-serif;
     font-weight: 500;
 }
-
 .card{
     background-color: #f9f9f9;
 }
+
+
 /* NAVBAR */
-
-
 .navbar-light .navbar-brand{
     color: #2a2a2ada;
     font-family: 'Patrick Hand', sans-serif;
 }
-
 .navbar-light .navbar-nav .nav-link{
     color: rgba(0,0,0,.6);
 }
-
 .navbar-brand{
     font-size: 28px;
-    font-weight: 600;   
+    font-weight: 600;
 }
-
-.navbar-nav > li > a:hover { 
+.navbar-nav > li > a:hover {
     background-color:rgb(255 193 7) !important;
     padding: 5px;
     border-radius: 15px;
     width: fit-content;
-    }
-
-.dropdown-item:hover { 
+}
+.dropdown-item:hover {
     background-color:rgb(255 193 7) !important;
     border-radius: 15px;
-    }
-    
+}
 .dropdown-menu{
-    background-color: rgb(187 187 187);;
+    background-color: rgb(187 187 187);
+   ;
 }
 
-/* HERO IMAGE */
 
+/* HERO IMAGE */
 .hero-image{
     background: url('../images/hero-image.jpg') no-repeat center center fixed;
     background-size: cover;
@@ -57,56 +49,46 @@ body {
 }
 
 
-
 /* WELCOME TITLE AND LOGIN/REGISTER BTN */
-
 .col-title{
     padding: 40px 15px;
     background-color: rgb(73 69 65 / 55%);
     border-radius: 5px;
     color: #efe5db;
 }
-
 .title{
     font-size: 45px;
     font-family: 'Patrick Hand', sans-serif;
 }
-
 .btn-login-register{
     padding: 10px;
 }
-
 hr{
     background: #484747;
 }
 
 
 /* RECENTLY ADDED RECIPES SECTION*/
-
 .card-recently-added{
     margin: 0 auto;
     margin-bottom: 30px;
     background-color: fff;
 }
-
 .img-fit{
     object-fit: cover;
 }
 
-/* CONTACT US SECTION */
 
+/* CONTACT US SECTION */
 .contact-form-color{
     background-color: rgba(0,0,0,.6);
 }
-
 .search-tab, .search-btn{
     border-radius: 25px;
 }
-
 input, textarea{
     width: 100%;
 }
-
 .contact-background{
     background: url('../images/contact-strawberries.jpg') no-repeat center center;
     background-size: cover;
@@ -114,90 +96,80 @@ input, textarea{
     margin-top: 6rem;
 }
 
-/* FOOTER */
 
+/* FOOTER */
 footer {
     font-size: 20px;
     width: 100%;
     text-align: center;
 }
-
 footer > p > i{
     font-size: 30px;
 }
 
-/* ACCOUNTS PAGES */
 
+/* ACCOUNTS PAGES */
 .accounts-image{
     background: url('../images/login-oranges.jpg') no-repeat center center;
     background-size: cover;
     height: 200px;
     width: 100%;
 }
-
 .accounts-section-margin{
     margin-bottom: 70px;
     margin-top: 20px;
 }
-
 .form-style{
     background-color: beige;
     padding: 25px 10px;
 }
 
-/* ALL RECIPES PAGE */
 
+/* ALL RECIPES PAGE */
 .all-recipes-cards{
     background-color: #f9f9f9;
 }
 
-/* POST DETAILS PAGE */
 
+/* POST DETAILS PAGE */
 .recipe-card-head {
     background-color: slategray;
     height: 33vh;
 }
-
 .recipe-card-head-img > img{
     height: 33vh;
 }
-
 .recipe-title {
     margin-left: 5%;
     margin-top: 15px;
 }
-
 .recipe-subtitle {
     margin-left: 5%;
     margin-bottom: 0;
     color: lightgray;
 }
-
 .recipes-content-body{
     background-color: #f9f9f9;
 }
 
 
 /* PAGINATION */
-
 .pagination{
     display:block;
 }
 
-/* ACCOUNTS  */
+
+/* ACCOUNTS */
 .login-register-bg{
     background-color: rgb(241 227 207);
 }
-
 .login-img > img {
     height: 33vh;
     width: 100%;
 }
-
 #id_remember{
     width: inherit;
 }
-
 .logout-img > img {
     height: 30vh;
     width: 100%;
@@ -206,62 +178,46 @@ footer > p > i{
 
 /* 700px and up */
 @media only screen and (min-width: 768px){
-
     .navbar{
         padding: 1rem;
         font-size: 1.1rem;
-    }
-   
+   }
     .navbar-brand{
-        font-size: 35px;   
-    }
-
+        font-size: 35px;
+   }
     .col-title{
         padding: 60px 30px;
-    }
-
+   }
     .title{
         font-size: 60px;
-    }
-
+   }
     .col-title{
         padding: 70px 70px;
-    }
-
-
+   }
     .accounts-image{
         background: url('../images/login-oranges.jpg') no-repeat center center;
         background-size: cover;
         height: 100%;
         width: 100%;
-    }
-
+   }
     .accounts-section-margin{
         margin-top: 40px;
-    }
-
+   }
     .image-padding{
         padding-right: 0px;
-    }
-
+   }
     .form-left-padding{
         padding-left: 0;
-    }
-
+   }
     .form-style{
         padding: 25px 30px;
         height: 100%;
-    }
-
+   }
     .recipe-title{
         margin-top: 10px;
-    }
-
+   }
     .login-img > img {
         height: 50vh;
         width: 100%;
-    }
-    
-
+   }
 }
-
