@@ -81,9 +81,6 @@ hr{
 }
 
 
-
-
-
 /* RECENTLY ADDED RECIPES SECTION*/
 
 .card-recently-added{
@@ -181,12 +178,13 @@ footer > p > i{
 }
 
 
-
+/* PAGINATION */
 
 .pagination{
     display:block;
 }
 
+/* ACCOUNTS  */
 .login-register-bg{
     background-color: rgb(241 227 207);
 }
@@ -204,6 +202,7 @@ footer > p > i{
     height: 30vh;
     width: 100%;
 }
+
 
 /* 700px and up */
 @media only screen and (min-width: 768px){
