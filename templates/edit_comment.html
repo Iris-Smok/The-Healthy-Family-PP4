@@ -4,6 +4,7 @@
 
 {% if user.is_authenticated and user.username == comment.name %}
 
+<!-- TITLE -->
 <div class="container">
     <div class="row">
         <div class="col-8 offset-2 text-center mt-5">
@@ -11,6 +12,8 @@
             <hr>
         </div>
     </div>
+
+    <!-- EDIT COMMENT FORM -->
 <div class="row">
     <div class="col-8 mt-3 offset-2 text-center">
         <form method="post" enctype="multipart/form-data">
