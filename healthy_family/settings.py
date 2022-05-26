@@ -71,6 +71,8 @@ CRISPY_TEMPLATES_PACK = 'bootstrap4'
 
 SUMMERNOTE_THEME = 'bs4'
 
+ACCOUNT_EMAIL_VERIFICATION = 'none'
+
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 MIDDLEWARE = [
