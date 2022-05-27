@@ -40,7 +40,7 @@
         <a href="{% url 'recipe_details' post.slug %}" class="text-decoration-none text-reset">
         <div class="card card-recently-added">
           {% if "placeholder" in post.image.url %}
-                <img src="../static/images/oranges.jpg" alt="Oranges" class="card-img-top img-fit" height="200">
+                <img src="https://res.cloudinary.com/irissmok/image/upload/v1653690451/login-oranges_ji6ly2.jpg" alt="Oranges" class="card-img-top img-fit" height="200">
             {% else %}
                 <img class="card-img-top img-fit" height="200px" src=" {{ post.image.url }}" alt="{{ post.title}}">
               {% endif %}
@@ -74,7 +74,7 @@
                         <br>
                     </div>
                     <div class="explore-image">
-                                <img class="img-fit card-img-top" src="{% static 'images/explore-image.jpg' %}" alt="Healthy food" height="400" width="600"> 
+                                <img class="img-fit card-img-top" src="https://res.cloudinary.com/irissmok/image/upload/v1653690909/explore-image_cdr5ds.jpg" alt="Healthy food" height="400" width="600"> 
                             </div>
                     </div>
                    
