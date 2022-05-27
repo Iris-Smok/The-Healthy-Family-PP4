@@ -6,7 +6,7 @@
 <div class="container">
     <div class="row">
         <div class="col-8 offset-2 text-center mt-5">
-            <h2>Results {{searched}}</h2>
+            <h2>Results for '{{searched}}'</h2>
             <hr>
         </div>
     </div>  
@@ -56,9 +56,12 @@
             </div>
         </div>
     </div>
-    <!-- PAGINATION -->
 
+    <!-- PAGINATION -->
+<div class="mt-auto">
 {% include "pagination.html" %}
+</div>
+
 
 <!-- END OF PAGINATION -->
      
