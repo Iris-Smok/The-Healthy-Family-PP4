@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
+{% load static %}
 {% load cloudinary %}
 {% if user.is_authenticated and user.id == post.author.id %}
 <!-- TITLE -->
