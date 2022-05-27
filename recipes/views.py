@@ -23,7 +23,7 @@ class HomePage(View):
     def get(self, request):
         """ get request """
         posts = Post.objects.order_by('-published_on')[:4]
-        liked_recipes = Post.objects.annotate(like_count=Count('likes')).order_by('-like_count')[:4]
+        liked_recipes = Post.objects.annotate(like_count=Count('likes')).order_by('-like_count')[:5]
         context = {
             "posts": posts,
             "contact_form": ContactForm(),
