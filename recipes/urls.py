@@ -23,6 +23,4 @@ urlpatterns = [
     path('favourite_recipes',
          views.FavouriteRecipes.as_view(), name='favourite_recipes'),
     path('search', views.search, name='search'),
-     
-     
 ]

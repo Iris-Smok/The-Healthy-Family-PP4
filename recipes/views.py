@@ -3,12 +3,10 @@ Views.py
 """
 from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic, View
-from django.views.generic.list import ListView
 from django.views.generic import UpdateView
 from django.db.models import Count
 from django.utils.text import slugify
-from django.http import HttpResponseRedirect, HttpResponse
-from django.core.mail import send_mail, BadHeaderError
+from django.http import HttpResponseRedirect
 from django.contrib.auth.models import User
 from django.core.paginator import Paginator
 from .models import Post, Comment
@@ -20,7 +18,6 @@ class HomePage(View):
     Home page view
     view for last added recipes,most loved recipes sections
     and contact form
-    
     """
 
     def get(self, request):
@@ -157,7 +154,9 @@ class YourRecipes(View):
         page_obj = paginator.get_page(page_number)
         return render(request, 'your_recipes.html', {"page_obj": page_obj, })
 
+
 class FavouriteRecipes(View):
+    """ favourite recipes view"""
     def get(self, request):
         """favourite_recipes view, get method"""
         post = Post.objects.filter(likes=request.user.id)
@@ -211,5 +210,3 @@ def delete_recipe(request, post_id):
     post.delete()
     return redirect(reverse(
         'your_recipes'))
-
-
