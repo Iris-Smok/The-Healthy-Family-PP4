@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<!-- TITLE -->
+<div class="container">
+    <div class="row">
+        <div class="col-8 offset-2 text-center mt-5">
+            <h2>{{searched}}</h2>
+            <hr>
+        </div>
+    </div>
+
+
+    
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 mt-4">
+                    <div class="row no-gutters">
+                        {% for post in posts %}
+                        <div class="col-md-4">
+                            <div class="card border-0 mb-4 all-recipes-cards">
+                                <a href="{% url 'recipe_details' post.slug %}" class="text-decoration-none text-reset">
+                                    <div class="card-body">
+                                        <div class="image-container">
+                                        {% if "placeholder" in post.image.url %}
+                                        <img src="../static/images/oranges.jpg" alt="Oranges" class="card-img-top img-fit" height="300">
+                                    {% else %}
+                                        <img class="card-img-top img-fit" height="300px" src=" {{ post.image.url }}" alt="{{ post.title}}">
+                                      {% endif %}
+                                        </div>
+                                        <h3 class="card-title">{{ post.title }}</h3>
+                                        <p class="text-muted">by {{ post.author }}</p>
+                                        <hr />
+                                        <p class="card-text text-muted h6">{{ post.published_on}} <i class="far fa-heart"></i>
+                                            {{ post.number_of_likes }}</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    {% if forloop.counter|divisibleby:3 %}
+                </div>
+                <div class="row">
+                    {% endif %}
+                    <!-- If search results empyty -->
+                    {% empty %}
+                    <div class="container log-box">
+                        <div class="row justify-content-md-center">
+                            <div class="col-md-8 offset-2 mt-4">
+                                <h2 class="display-5">Sorry</h2>
+                                <p class="lead">There are no recipes with '{{ searched }}' in the title.</p>
+                                <p class="lead"> Browse through all recipes <a href="{% url 'all_recipes' %}">here</a>. Or try searching again.</p>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    {%endblock%}
+
