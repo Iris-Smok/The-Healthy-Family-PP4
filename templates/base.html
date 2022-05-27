@@ -97,10 +97,11 @@
         </li>
         {% endif %}
         </ul>
-        <form class="form-inline my-2 my-lg-0">
-          <input
+        <form method="get" action="{% url 'search' %}" class="form-inline my-2 my-lg-0">
+          {% csrf_token %}
+          <input name="query"
             class="form-control search-tab mr-sm-2"
-            type="search"
+            type="text"
             placeholder="Search Recipes"
             aria-label="Search"
           />
