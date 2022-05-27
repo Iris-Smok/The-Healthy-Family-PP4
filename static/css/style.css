@@ -39,7 +39,10 @@
 
 /* HERO IMAGE */
 .hero-image{
-    background: url('../images/hero-image.jpg') no-repeat center center fixed;
+    background: no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
     height: 90vh;
     display: flex;
