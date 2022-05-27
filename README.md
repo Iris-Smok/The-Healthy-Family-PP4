@@ -43,7 +43,7 @@ Using the core UX principles I first started with Strategy, thinking about the t
 
 The target audience for 'The Healthy Family' are:
 
-- all age groups but mostly female, mothers
+- all age groups but mostly females, mothers
 - everyone who is looking for inspiration in preparing healthy meals for their children
 - people who like to share their kitchen creations with others
 - people who are not experts in cooking
@@ -97,12 +97,11 @@ This website will offer all of these things whilst also allowing for intuitive n
 ### **Home Page**
 *Navigation bar:* 
 - The navigation bar appears on every page so users can easily navigate through the site
-- The active page will be underlined and bolded so that users know which page they are on
 - Navigation bar has links for 'Home', 'Recipes' and 'Contact us' more links will be shown to logged in users
 - If the user is logged in then the left side of the menu shows links for pages that only authorized users can visit and use, they are: 'Favorite Recipes', 'Your Recipes' and  'Logout'. Otherwise, the user will be given the option to 'Register' or 'Login'
 - The user name will also appear on the bar, indicating which user is logged in
 - A search bar is nested in the navbar to find recipes quickly
-- The navbar is fully responsive, collapsing into a hamburger menu when the screen size becomes too small
+- The navbar is fully responsive, collapsing into a hamburger menu for medium and small screen size
 
 *Hero Image:*
 - The hero image welcomes the user with a short message advertising what the website is about
@@ -110,7 +109,7 @@ This website will offer all of these things whilst also allowing for intuitive n
 
 *Recently added recipes:*
 - Recently Added section shows the latest published recipes so users can quickly see recently published recipes
-- The Recently Added section is fully responsive, showing 4 recipe cards on a desktop and 3 on a tablet and mobile
+- The Recently Added section is fully responsive, showing 4 recipe cards
 - Each recipe takes the user to the recipe details page
 - Users can also see title, image, author, date posted, short description and number of likes
 
@@ -136,7 +135,7 @@ This website will offer all of these things whilst also allowing for intuitive n
 - The Login / Register button takes users to the login page where they can also find a link to the Register page where they can create an account
 
 ### **Favorite Recipes Page**
-- Only logged in users can se Favorite Recipes Page
+- Only logged in users can see Favorite Recipes Page
 - The Favorite Recipes page shows all the recipes that the user liked
 
 ### **Your Recipes Page**
@@ -159,18 +158,24 @@ This website will offer all of these things whilst also allowing for intuitive n
 - If the user doesn't fill in one of the fields the error message appears
 - If the user doesn't provide their image, the default image is displayed
 - The Add Recipe button is located at the end of the page
-- A success message appears once a recipe is added successfully
 
 
 ### Future Features
 - Categories
 - Users settings
 - Preparation time
+- Notification for likes and comments
+- Search bar 
 
 
 #
 # Structure
+ 
+Since our target audience is mostly moms, but also everyone else who is looking for inspiration in preparing meals for children the structure idea
+for The Healthy Family was to keep it simple. Simplicity helps users to quickly and easily access the app and navigate within the app.
 
+The website is made from one app:
+- recipes
 
 
 # Wireframes

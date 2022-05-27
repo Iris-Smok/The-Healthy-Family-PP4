@@ -23,11 +23,12 @@ class HomePage(View):
     def get(self, request):
         """ get request """
         posts = Post.objects.order_by('-published_on')[:4]
-        liked_recipes = Post.objects.annotate(like_count=Count('likes')).order_by('-like_count')[:5]
+        liked_recipes = Post.objects.annotate(
+            like_count=Count('likes')).order_by('-like_count')[:5]
         context = {
             "posts": posts,
             "contact_form": ContactForm(),
-            "liked_recipes": liked_recipes
+            "liked_recipes": liked_recipes,
         }
         return render(request, 'index.html', context)
 
@@ -164,14 +165,16 @@ class FavouriteRecipes(View):
         paginator = Paginator(post, 6)  # Show 6 recipes per page
         page_number = request.GET.get('page')
         page_obj = paginator.get_page(page_number)
-        return render(request, 'favourite_recipes.html', {"page_obj": page_obj, })
+        return render(
+            request, 'favourite_recipes.html', {"page_obj": page_obj, })
 
 
 class AddRecipe(View):
     """ add recipe"""
     def get(self, request):
         """What happens for a GET request"""
-        return render(request, "add_recipe.html", {"recipe_form": RecipeForm()})
+        return render(
+            request, "add_recipe.html", {"recipe_form": RecipeForm()})
 
     def post(self, request):
         """What happens for a POST request"""
@@ -180,7 +183,9 @@ class AddRecipe(View):
         if recipe_form.is_valid():
             recipe = recipe_form.save(commit=False)
             recipe.author = request.user
-            recipe.slug = slugify('-'.join([recipe.title, str(recipe.author)]), allow_unicode=False)
+            recipe.slug = slugify('-'.join([recipe.title,
+                                            str(recipe.author)]),
+                                  allow_unicode=False)
             recipe.save()
             return redirect('your_recipes')
         else:
