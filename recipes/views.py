@@ -40,8 +40,11 @@ def search(request):
     https://www.teckiy.com/blog/implementation-of-search-bar-using-django-in-any-website-2936659075/
     """
     searched = request.GET['query']
-    posts = Post.objects.filter(title__icontains=searched)
-    context = {'posts': posts, 'searched': searched}
+    post = Post.objects.filter(title__icontains=searched)
+    paginator = Paginator(post, 6)  # Show 6 recipes per page
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
+    context = {'page_obj': page_obj, 'searched': searched}
     return render(request, 'search.html', context)
 
 
