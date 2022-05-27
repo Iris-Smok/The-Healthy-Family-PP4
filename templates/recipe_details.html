@@ -45,7 +45,7 @@
             {% csrf_token %}
             {% if liked %}
             <button type="submit" value="{{ post.slug }}" class="btn-like border-0">
-            <i class="fas fa-heart"></i>
+            <i class="fas fa-heart" style="color: red;"></i>
             </button>
             {% else %}
             <button type="submit" value="{{ post.slug }}" class="btn-like border-0">
