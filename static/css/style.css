@@ -92,7 +92,10 @@ input, textarea{
     width: 100%;
 }
 .contact-background{
-    background: url('../images/contact-strawberries.jpg') no-repeat center center;
+    background: no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
     color: #efe5db;
     margin-top: 6rem;
