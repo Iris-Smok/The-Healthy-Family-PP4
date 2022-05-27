@@ -3,6 +3,7 @@ Views.py
 """
 from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic, View
+from django.views.generic.list import ListView
 from django.views.generic import UpdateView
 from django.db.models import Count
 from django.utils.text import slugify
@@ -32,6 +33,16 @@ class HomePage(View):
             "liked_recipes": liked_recipes
         }
         return render(request, 'index.html', context)
+
+
+def search(request):
+    """ Search bar view, followed instructions from
+    https://www.teckiy.com/blog/implementation-of-search-bar-using-django-in-any-website-2936659075/
+    """
+    searched = request.GET['query']
+    posts = Post.objects.filter(title__icontains=searched)
+    context = {'posts': posts, 'searched': searched}
+    return render(request, 'search.html', context)
 
 
 class AllRecipes(generic.ListView):
