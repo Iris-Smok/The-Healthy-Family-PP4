@@ -33,17 +33,21 @@ class HomePage(View):
         return render(request, 'index.html', context)
 
 
-def search(request):
-    """ Search bar view, followed instructions from
-    https://www.teckiy.com/blog/implementation-of-search-bar-using-django-in-any-website-2936659075/
-    """
-    searched = request.GET['query']
-    post = Post.objects.filter(title__icontains=searched)
-    paginator = Paginator(post, 6)  # Show 6 recipes per page
-    page_number = request.GET.get('page')
-    page_obj = paginator.get_page(page_number)
-    context = {'page_obj': page_obj, 'searched': searched}
-    return render(request, 'search.html', context)
+class SearchRecipe(View):
+    """ Search recipes view"""
+
+    def get(self, request):
+        """ Search bar view"""
+        searched = request.GET['query']
+        post = Post.objects.filter(title__icontains=searched)
+        paginator = Paginator(post, 6)  # Show 6 recipes per page
+        page_number = request.GET.get('page')
+        page_obj = paginator.get_page(page_number)
+        context = {
+            'page_obj': page_obj,
+            'searched': searched
+        }
+        return render(request, 'search.html', context)
 
 
 class AllRecipes(generic.ListView):
