@@ -124,7 +124,7 @@ footer {
 
 /* ACCOUNTS PAGES */
 .accounts-image{
-    background: url('../images/login-oranges.jpg') no-repeat center center;
+    background: no-repeat center center;
     background-size: cover;
     height: 200px;
     width: 100%;
@@ -210,7 +210,7 @@ footer {
         padding: 70px 70px;
    }
     .accounts-image{
-        background: url('../images/login-oranges.jpg') no-repeat center center;
+        background: no-repeat center center;
         background-size: cover;
         height: 100%;
         width: 100%;
