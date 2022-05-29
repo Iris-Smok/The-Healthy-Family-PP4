@@ -182,9 +182,9 @@ The website is made from one app:
 All wireframes were created used [Balsamiq](https://balsamiq.com/)
 
 Wireframes for each device are linked here:
-- [Desktop](assets/documents/Mobile-wireframes)
-- [Tablet](assets/documents/wireframes-tablet.pdf)
-- [Mobile](assets/documents/wireframes-mobile.pdf)
+- [Desktop](assets/documents/Desktop-wireframes)
+- [Tablet](assets/documents/Tablet-wireframes)
+- [Mobile](assets/documents/Mobile-wireframes)
 
 
 # Database schema
