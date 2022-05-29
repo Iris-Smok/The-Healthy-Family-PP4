@@ -45,12 +45,12 @@ INSTALLED_APPS = [
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
-    'cloudinary_storage',
     'django.contrib.messages',
     'django.contrib.sites',
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
+    'cloudinary_storage',
     'django.contrib.staticfiles',
     'cloudinary',
     'django_summernote',
@@ -76,6 +76,7 @@ CRISPY_TEMPLATES_PACK = 'bootstrap4'
 SUMMERNOTE_THEME = 'bs4'
 
 ACCOUNT_EMAIL_VERIFICATION = 'none'
+
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
@@ -160,6 +161,7 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
+
 
 STATIC_URL = '/static/'
 STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'  # noqa
