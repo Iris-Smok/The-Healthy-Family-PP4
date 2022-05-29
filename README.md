@@ -198,8 +198,17 @@ Wireframes for each device are linked here:
 ## Design 
 
 ## Chosen Color 
+Color palette from Coolors
+<p align="center">
+<img src="static/images/used-colors.png" width="900" height="250">
+</p>
 
- 
+- **#BBBBBB** - navbar background color. It fits nicely with the hero image.
+- **#FFC107** - buttons color. I choose this color because it matches nicely with the rest of the page and it elevates the look of the page
+- **#F9F9F9** - body site color. Fits nicely with the rest of the page. I choose this color because normal white color is to bright
+- **#F1E3CF**- background color for login/register forms. I choose this color because it fits nicely with side image
+
+
 
 ## Font 
 
