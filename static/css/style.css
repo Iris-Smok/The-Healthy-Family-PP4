@@ -80,36 +80,18 @@ hr{
     object-fit: cover;
 }
 
-/* CONTACT US SECTION */
-.contact-form-color{
-    background-color: rgba(0,0,0,.6);
-}
-.search-tab, .search-btn{
-    border-radius: 25px;
-}
-input, textarea{
-    width: 100%;
-}
-.contact-background{
-    background: no-repeat center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    color: #efe5db;
-    margin-top: 6rem;
-}
-
 
 /* FOOTER */
 footer {
     font-size: 20px;
     width: 100%;
     text-align: center;
+    color: #ffff;
+    background-color: #484747;
 }
 
 .footer a {
-    color: #343a40;
+    color: #fff;
     
 }
 
@@ -120,8 +102,7 @@ footer {
     
 }
 
-
-/* ACCOUNTS PAGES */
+/* ACCOUNTS */
 .accounts-image{
     background: no-repeat center center;
     background-size: cover;
@@ -132,9 +113,34 @@ footer {
     margin-bottom: 70px;
     margin-top: 20px;
 }
+
 .form-style{
     background-color: beige;
     padding: 25px 10px;
+}
+
+
+input[type=text], input[type=password],input[type=email]{
+    display: block;
+    width: 90%;
+}
+
+.login-register-bg{
+    background-color: rgb(241 227 207);
+}
+
+.login-img > img {
+    height: 33vh;
+    width: 100%;
+}
+
+.logout-img > img {
+    height: 30vh;
+    width: 100%;
+}
+
+.input-group-append .btn:hover{
+    background-color: yellow;
 }
 
 
@@ -171,25 +177,6 @@ footer {
 }
 
 
-/* ACCOUNTS */
-.login-register-bg{
-    background-color: rgb(241 227 207);
-}
-.login-img > img {
-    height: 33vh;
-    width: 100%;
-}
-#id_remember{
-    width: inherit;
-}
-.logout-img > img {
-    height: 30vh;
-    width: 100%;
-}
-
-.input-group-append .btn:hover{
-    background-color: yellow;
-}
 /* 700px and up */
 @media only screen and (min-width: 768px){
     .navbar{

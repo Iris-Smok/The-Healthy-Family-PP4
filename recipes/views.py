@@ -10,7 +10,7 @@ from django.http import HttpResponseRedirect
 from django.contrib.auth.models import User
 from django.core.paginator import Paginator
 from .models import Post, Comment
-from .forms import CommentForm, RecipeForm, ContactForm
+from .forms import CommentForm, RecipeForm
 
 
 class HomePage(View):
@@ -27,7 +27,6 @@ class HomePage(View):
             like_count=Count('likes')).order_by('-like_count')[:5]
         context = {
             "posts": posts,
-            "contact_form": ContactForm(),
             "liked_recipes": liked_recipes,
         }
         return render(request, 'index.html', context)
