@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 {% load static %}
+{% if user.is_authenticated %}
 <div class="container">
    <div class="row">
       <div class="col-12 text-center mt-5">
@@ -80,4 +81,5 @@
 <!-- PAGINATION -->
 {% include "pagination.html" %}
 <!-- END OF PAGINATION -->
+{% endif %}
 {%endblock%}
