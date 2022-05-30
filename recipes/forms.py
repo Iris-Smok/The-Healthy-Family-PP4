@@ -27,6 +27,7 @@ class RecipeForm(forms.ModelForm):
                   'preparation_steps', 'image')
 
         widgets = {
+            'description': SummernoteWidget(),
             'ingredients': SummernoteWidget(),
             'preparation_steps': SummernoteWidget(),
         }
