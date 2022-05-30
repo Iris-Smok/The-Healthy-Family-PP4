@@ -147,8 +147,10 @@ class RecipeLike(View):
         return HttpResponseRedirect(reverse('recipe_details', args=[slug]))
 
 
+
 class YourRecipes(View):
     """ view for user recipes page"""
+
     def get(self, request):
         """your_recipes view, get method"""
         post = Post.objects.filter(author=request.user)
