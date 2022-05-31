@@ -2,7 +2,7 @@
 <h1 align="center">The Healthy Family</h1>
 
 <p align="center">
-<img src="assets/documents/responsive-site.png" width="600" height="100%">
+<img src="assets/images/responsive-site.png" width="600" height="100%">
 </p>
 
 This is a full-stack framework project built using Django, Python, HTML, CSS and JavaScript. My goal is to create a functioning and responsive website, that allows users to post, comment and like or unlike recipes. This project has been built for educational purposes.
@@ -234,8 +234,24 @@ Wireframes for each device are linked here:
 # Database schema
 
 <p align="center">
-<img src="assets/documents/database-schema.png" width="900" height="100%">
+<img src="assets/images/database-schema.png" width="900" height="100%">
 </p>
+
+## Models
+### **Post Model**
+
+Please note that I am aware of this error. The Post model should be called the Recipe model. But when I wanted to change the name it was already too late because I had already written most of the code. The mentor mentioned to me that I should rename the model, but since the whole code was already written, I felt that changing the name was too much of a risk. I will avoid mistakes like this in the future
+
+<p align="center">
+<img src="assets/images/post-model.png" width="900" height="100%">
+</p>
+
+### **Comment Model**
+
+<p align="center">
+<img src="assets/images/comment-model.png" width="900" height="100%">
+</p>
+
 
 # Surface
 
@@ -244,7 +260,7 @@ Wireframes for each device are linked here:
 ## Chosen Color 
 Color palette from [Coolors](https://coolors.co/9df57a-3c444c-fee73b-ff4f98-2daaf3-a9bedb)
 <p align="center">
-<img src="assets/documents/used-colors.png" width="800" height="300">
+<img src="assets/images/used-colors.png" width="800" height="300">
 </p>
 
 - **#BBBBBB** - navbar background color. It fits nicely with the hero image.
