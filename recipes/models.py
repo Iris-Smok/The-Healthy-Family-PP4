@@ -12,7 +12,7 @@ class Post(models.Model):
     """
     Post model
     """
-    title = models.CharField(max_length=200, blank=False, null=False, unique=True)
+    title = models.CharField(max_length=200, blank=False, null=False)
     slug = models.SlugField(max_length=200, unique=True)
     author = models.ForeignKey(User, on_delete=models.CASCADE,related_name='blog_posts')  # noqa
     published_on = models.DateTimeField(auto_now_add=True)
