@@ -340,7 +340,7 @@ This was tested by accessing the Django Admin Panel. By creating a Superuser we 
 1. As a logged-in User I can write comments on recipes so that I can leave my feedback
 
 <p align="center">
-<img src="assets/images/write-comment.png" width="600" height="300">
+<img src="assets/images/leave-comment.png" width="500" height="300">
 </p>
 
 2. As a logged-in User I can like and unlike recipes so that I can mark which recipes I like
@@ -355,7 +355,7 @@ This was tested by accessing the Django Admin Panel. By creating a Superuser we 
 
 4. As a User I can view comments on recipes so that I can read other users opinions
 <p align="center">
-<img src="assets/images/leave-comment.png" width="500" height="300">
+<img src="assets/images/read-comments.png" width="800" height="100%">
 </p>
 
 **EPIC: User Recipes**
@@ -416,10 +416,33 @@ This was tested by accessing the Django Admin Panel. By creating a Superuser we 
 </p>
 
 ## Bugs and Issues
+- I had a problem where summernote field for preparation_steps wasn't loading. 
+The error was corrected by deleting the unnecessary space after the quotation marks indicating the summernote field
+
+- Error - my search engine could not search recipes by title. The mistake was in writing _icontain where there should be two __ I listed one _. 
+I fixed the error bu adding another _ to __icontain
+
+- Your_recipes page 404 - I had a problem when I tried to get your_recipes page it displays page 404. After checking that everything is correctly related to the names entered and I still haven't found the bug, I contacted tutor support. The problem was in Chrome, your_recipe page is loading in every other browser. The mistake was in my chrome extensions.
+
+- Pagination was not working. Upon checking the django documents I realised I hadn't coded pagination correctly for Class views. Using the documentation I corrected the mistake.
+
+- User image uploads weren't uploading to Cloudinary. To fix this I added {% load cloudinary %} at the top of the file
 
 # Deployment
+This project was deployed using Github and Heroku.
 
+## Github 
+To create a new repository I took the following steps:
 
+- Logged into Github.
+- Clicked over to the ‘repositories’ section.
+- Clicked the green ‘new’ button. This takes you to the create new repository page.
+- Once there under ‘repository template’ I chose the code institute template from the dropdown menu.
+- I input a repository name then clicked the green ‘create repository button’ at the bottom of the page.
+- Once created I opened the new repository and clicked the green ‘Gitpod’ button to create a workspace in Gitpod for editing.
+
+## Django and Heroku 
+- To get the Django framework installed and set up I followed the Code institutes [Django Blog cheatsheet](https://codeinstitute.s3.amazonaws.com/fst/Django%20Blog%20Cheat%20Sheet%20v1.pdf)
 
 # Credits
 
