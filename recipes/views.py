@@ -36,8 +36,12 @@ class SearchRecipe(View):
     """ Search recipes view"""
 
     def get(self, request):
-        """ Search bar view"""
-        searched = request.GET['query']
+        """get method"""
+        return render(request, 'search.html')
+    
+    def post(self, request):
+        """ post method"""
+        searched = request.POST.get('searched')
         post = Post.objects.filter(title__icontains=searched)
         paginator = Paginator(post, 6)  # Show 6 recipes per page
         page_number = request.GET.get('page')
@@ -47,6 +51,22 @@ class SearchRecipe(View):
             'searched': searched
         }
         return render(request, 'search.html', context)
+
+# class SearchRecipe(View):
+#     """ Search recipes view"""
+
+#     def get(self, request):
+#         """ Search bar view"""
+#         searched = request.GET['searched']
+#         post = Post.objects.filter(title__icontains=searched)
+#         paginator = Paginator(post, 6)  # Show 6 recipes per page
+#         page_number = request.GET.get('page')
+#         page_obj = paginator.get_page(page_number)
+#         context = {
+#             'page_obj': page_obj,
+#             'searched': searched
+#         }
+#         return render(request, 'search.html', context)
 
 
 class AllRecipes(generic.ListView):
@@ -147,31 +167,36 @@ class RecipeLike(View):
         return HttpResponseRedirect(reverse('recipe_details', args=[slug]))
 
 
-
 class YourRecipes(View):
     """ view for user recipes page"""
 
     def get(self, request):
         """your_recipes view, get method"""
-        post = Post.objects.filter(author=request.user)
+        if request.user.is_authenticated:
+            post = Post.objects.filter(author=request.user)
 
-        paginator = Paginator(post, 6)  # Show 6 recipes per page
-        page_number = request.GET.get('page')
-        page_obj = paginator.get_page(page_number)
-        return render(request, 'your_recipes.html', {"page_obj": page_obj, })
+            paginator = Paginator(post, 6)  # Show 6 recipes per page
+            page_number = request.GET.get('page')
+            page_obj = paginator.get_page(page_number)
+            return render(request, 'your_recipes.html', {"page_obj": page_obj, })
+        else:
+            return render(request, 'your_recipes.html')
 
 
 class FavouriteRecipes(View):
     """ favourite recipes view"""
     def get(self, request):
         """favourite_recipes view, get method"""
-        post = Post.objects.filter(likes=request.user.id)
+        if request.user.is_authenticated:
+            post = Post.objects.filter(likes=request.user.id)
 
-        paginator = Paginator(post, 6)  # Show 6 recipes per page
-        page_number = request.GET.get('page')
-        page_obj = paginator.get_page(page_number)
-        return render(
-            request, 'favourite_recipes.html', {"page_obj": page_obj, })
+            paginator = Paginator(post, 6)  # Show 6 recipes per page
+            page_number = request.GET.get('page')
+            page_obj = paginator.get_page(page_number)
+            return render(
+                request, 'favourite_recipes.html', {"page_obj": page_obj, })
+        else:
+           return render(request, 'favourite_recipes.html')
 
 
 class AddRecipe(View):
