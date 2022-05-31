@@ -16,8 +16,8 @@
                     </a>
 
                     {% else %}
-                    <a href="{% url 'account_login' %}">
-                        <button class="btn btn-warning btn-login-register">Login/Register</button>
+                    <a href="{% url 'account_login' %}"
+                         class="btn btn-warning btn-login-register">Login/Register
                     </a>
                     {% endif %}
    
@@ -90,8 +90,8 @@
                 <ol class="lead pl-4">
                     {% for liked_recipe in liked_recipes %}
                     <li>
-                        <a class="text-reset" href="{% url 'recipe_details' liked_recipe.slug %}"
-                            class="recipe-link">{{ liked_recipe.title}} </a>
+                        <a class="text-reset recipe-link" href="{% url 'recipe_details' liked_recipe.slug %}"
+                            >{{ liked_recipe.title}} </a>
                         <hr />
                     </li>
                     {% endfor %}
