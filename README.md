@@ -1,7 +1,9 @@
 
 <h1 align="center">The Healthy Family</h1>
 
-                Image
+<p align="center">
+<img src="assets/documents/responsive-site.png" width="600" height="100%">
+</p>
 
 This is a full-stack framework project built using Django, Python, HTML, CSS and JavaScript. My goal is to create a functioning and responsive website, that allows users to post, comment and like or unlike recipes. This project has been built for educational purposes.
 
