@@ -106,12 +106,18 @@ This website will offer all of these things whilst also allowing for intuitive n
 - The navbar is fully responsive, collapsing into a hamburger menu for medium and small screen size
 
 <p align="center">
-<img src="assets/images-features/navigation-bar.png" width="1000" height="100%">
+<img src="assets/images-features/navigation-bar.png" width="100%" height="100%">
 </p>
+
 
 *Hero Image:*
 - The hero image welcomes the user with a short message advertising what the website is about
 - The Login / Register button will take users to the login page, if users do not have an account there is a link to the registration page
+
+<p align="center">
+<img src="assets/images-features/hero-image.png" width="100%" height="100%">
+</p>
+
 
 *Recently added recipes:*
 - Recently Added section shows the latest published recipes so users can quickly see recently published recipes
@@ -119,27 +125,52 @@ This website will offer all of these things whilst also allowing for intuitive n
 - Each recipe takes the user to the recipe details page
 - Users can also see title, image, author, date posted, short description and number of likes
 
+<p align="center">
+<img src="assets/images-features/recently-added-recipes.png" width="100%" height="100%">
+</p>
+
+
 *Most Loved Recipes:*
 - The Most Loved Recipes section displays the top 5 recipes with the most likes
 - Each recipe takes the user to the recipe details page
 - At the bottom of the list there is a link to the Recipes page that takes users to the page with all the recipes
+<p align="center">
+<img src="assets/images-features/most-loved-recipes.png" width="100%" height="100%">
+</p>
+
 
 *Footer:*
 - Appears on every page snd contains social links
 - Links are opened in a new tab to avoid dragging users from our site
+<p align="center">
+<img src="assets/images-features/footer.png" width="100%" height="100%">
+</p>
 
 ### **Recipes Page**
 - The Recipes page shows all the published recipes, recipes are shown in order from newest to oldest
 - The site will paginate all recipe cards to display 6 to a page
 - Each recipe card will display an image, authors name, date posted, short description and number of likes
 - Each recipe card takes users to the recipe details page 
+<p align="center">
+<img src="assets/images-features/all-recipes-page.png" width="100%" height="100%">
+</p>
 
 ### **Login/Register**
 - The Login / Register button takes users to the login page where they can also find a link to the Register page where they can create an account
+<p align="center">
+<img src="assets/images-features/login.png" width="100%" height="100%">
+</p>
+
+<p align="center">
+<img src="assets/images-features/register.png" width="100%" height="100%">
+</p>
 
 ### **Favorite Recipes Page**
 - Only logged in users can see Favorite Recipes Page
 - The Favorite Recipes page shows all the recipes that the user liked
+<p align="center">
+<img src="assets/images-features/favourite-recipes-page.png" width="100%" height="100%">
+</p>
 
 ### **Your Recipes Page**
 - The Your Recipes page displays all the recipes that user has created
@@ -147,6 +178,9 @@ This website will offer all of these things whilst also allowing for intuitive n
 - Each recipe has two buttons, Edit and Delete
 - Edit button takes user to the edit page
 - Clicking the Delete button will display the message asking the users if they are sure they want to delete that particular recipe
+<p align="center">
+<img src="assets/images-features/your-recipes-page.png" width="100%" height="100%">
+</p>
 
 ### **Recipes Details Page**
 - The Recipes Details Page displays all the information about the selected recipes
@@ -154,6 +188,13 @@ This website will offer all of these things whilst also allowing for intuitive n
 - The main body of the page contains short description of the recipe, ingredients and preparation steps
 - Number of likes and comments are displayed after the preparation steps
 - Commenting section is located at the end of the page, only logged in users can leave a comment
+<p align="center">
+<img src="assets/images-features/recipe-details-card-head.png" width="100%" height="100%">
+</p>
+
+<p align="center">
+<img src="assets/images-features/recipe-details-body.png" width="100%" height="100%">
+</p>
 
 ### **Add Recipe Page**
 - On the Add Recipe page users can add their recipes to the website
@@ -161,7 +202,9 @@ This website will offer all of these things whilst also allowing for intuitive n
 - If the user doesn't fill in one of the fields the error message appears
 - If the user doesn't provide their image, the default image is displayed
 - The Add Recipe button is located at the end of the page
-
+<p align="center">
+<img src="assets/images-features/add-recipe.png" width="100%" height="100%">
+</p>
 
 ### Future Features
 - Categories
