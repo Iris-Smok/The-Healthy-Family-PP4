@@ -95,9 +95,9 @@
                </li>
                {% endif %}
             </ul>
-            <form method="get" action="{% url 'search' %}" class="d-flex">
+            <form method="post" action="{% url 'search' %}" class="d-flex">
                {% csrf_token %}
-               <input name="query"
+               <input name="searched"
                   class="form-control search-tab"
                   type="text"
                   placeholder="Search Recipes"
