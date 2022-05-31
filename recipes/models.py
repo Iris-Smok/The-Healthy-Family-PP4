@@ -31,7 +31,7 @@ class Post(models.Model):
         """
         string title
         """
-        return self.title
+        return str(self.title)
 
     def number_of_likes(self):
         """ return number of likes"""
