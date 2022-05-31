@@ -38,6 +38,8 @@ else:
 
 DEBUG = development
 
+X_FRAME_OPTIONS = 'SAMEORIGIN'
+
 ALLOWED_HOSTS = ['the-healthy-family.herokuapp.com', 'localhost']
 
 
