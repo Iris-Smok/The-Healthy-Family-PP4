@@ -42,7 +42,8 @@ class TestRecipeForm(TestCase):
         form = RecipeForm()
         self.assertEqual(
             form.Meta.fields, (
-                'title', 'description', 'ingredients', 'preparation_steps', 'image')
+                'title', 'description', 'ingredients',
+                'preparation_steps', 'image')
             )
 
 

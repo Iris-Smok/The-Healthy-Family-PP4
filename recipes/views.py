@@ -1,6 +1,8 @@
 """
 Views.py
 """
+# pylint: disable=locally-disabled, no-member
+
 from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic, View
 from django.views.generic import UpdateView
@@ -8,7 +10,6 @@ from django.db.models import Count
 from django.utils.text import slugify
 from django.contrib import messages
 from django.http import HttpResponseRedirect
-from django.contrib.auth.models import User
 from django.core.paginator import Paginator
 from .models import Post, Comment
 from .forms import CommentForm, RecipeForm
@@ -39,7 +40,7 @@ class SearchRecipe(View):
     def get(self, request):
         """get method"""
         return render(request, 'search.html')
-    
+
     def post(self, request):
         """ post method"""
         searched = request.POST.get('searched')
@@ -163,7 +164,8 @@ class YourRecipes(View):
             paginator = Paginator(post, 6)  # Show 6 recipes per page
             page_number = request.GET.get('page')
             page_obj = paginator.get_page(page_number)
-            return render(request, 'your_recipes.html', {"page_obj": page_obj, })
+            return render(
+                request, 'your_recipes.html', {"page_obj": page_obj, })
         else:
             return render(request, 'your_recipes.html')
 
@@ -181,7 +183,7 @@ class FavouriteRecipes(View):
             return render(
                 request, 'favourite_recipes.html', {"page_obj": page_obj, })
         else:
-           return render(request, 'favourite_recipes.html')
+            return render(request, 'favourite_recipes.html')
 
 
 class AddRecipe(View):

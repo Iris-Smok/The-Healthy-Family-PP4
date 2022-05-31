@@ -1,7 +1,8 @@
+""" Test for views.py """
+# pylint: disable=locally-disabled, no-member
 from django.test import TestCase
 from django.contrib.auth.models import User
 from .models import Post, Comment
-
 
 
 class TestUser(TestCase):
@@ -20,7 +21,6 @@ class TestUser(TestCase):
 
 class TestGetPages(TestCase):
     """ tests to ensure all the pages are displayes"""
- 
     def test_get_home_page(self):
         """
         Get home page test
@@ -98,4 +98,3 @@ class TestGetPages(TestCase):
         response = self.client.get('/search')
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'search.html')
-
