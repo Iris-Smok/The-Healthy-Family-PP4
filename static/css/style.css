@@ -39,9 +39,6 @@
 /* HERO IMAGE */
 .hero-image{
     background: no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
     background-size: cover;
     height: 90vh;
     display: flex;
@@ -74,7 +71,6 @@ hr{
 .card-recently-added{
     margin: 0 auto;
     margin-bottom: 30px;
-    background-color: fff;
 }
 .img-fit{
     object-fit: cover;
