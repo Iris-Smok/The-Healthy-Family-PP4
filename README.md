@@ -105,6 +105,10 @@ This website will offer all of these things whilst also allowing for intuitive n
 - A search bar is nested in the navbar to find recipes quickly
 - The navbar is fully responsive, collapsing into a hamburger menu for medium and small screen size
 
+<p align="center">
+<img src="assets/images-features/navigation-bar.png" width="1000" height="100%">
+</p>
+
 *Hero Image:*
 - The hero image welcomes the user with a short message advertising what the website is about
 - The Login / Register button will take users to the login page, if users do not have an account there is a link to the registration page
@@ -164,8 +168,6 @@ This website will offer all of these things whilst also allowing for intuitive n
 - Users settings
 - Preparation time
 - Notification for likes and comments
-- Search bar 
-
 
 #
 # Structure
@@ -265,6 +267,13 @@ Color palette from [Coolors](https://coolors.co/9df57a-3c444c-fee73b-ff4f98-2daa
 
 
 # Validating 
+The W3C Markup Validator and W3C CSS Validator Services were used to check my code for syntax errors in this project.
+
+- [HTML](https://validator.w3.org/#validate_by_input)- I checked each page by direct input method on HTML validator site
+
+
+- [CSS](https://jigsaw.w3.org/css-validator/)
+
 
 
 ## User Story Testing
@@ -273,15 +282,9 @@ Color palette from [Coolors](https://coolors.co/9df57a-3c444c-fee73b-ff4f98-2daa
 
 
 
-### **HTML Validator** 
-
-
-
-
-### **CSS Validator** 
-
-
 # Final Product 
+
+
 
 
 # Deployment
@@ -289,6 +292,12 @@ Color palette from [Coolors](https://coolors.co/9df57a-3c444c-fee73b-ff4f98-2daa
 
 
 # Credits
+
+- All content was written by Iris Smok
+- The structure of the gallery page is similar to the "Love Running" gallery page. I customized the design to fit my website.
+
+- [Search bar](https://www.teckiy.com/blog/implementation-of-search-bar-using-django-in-any-website-2936659075/) - this site is used to help me build Search bar
+- [Taste](https://www.taste.com.au/) - I copied recipes from this site for test posts
 
 ## Content
 
