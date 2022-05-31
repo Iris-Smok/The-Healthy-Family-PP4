@@ -106,7 +106,7 @@ This website will offer all of these things whilst also allowing for intuitive n
 - The navbar is fully responsive, collapsing into a hamburger menu for medium and small screen size
 
 <p align="center">
-<img src="assets/images-features/navigation-bar.png" width="100%" height="100%">
+<img src="assets/images-features/navbar.png" width="100%" height="100%">
 </p>
 
 
@@ -158,7 +158,7 @@ This website will offer all of these things whilst also allowing for intuitive n
 ### **Login/Register**
 - The Login / Register button takes users to the login page where they can also find a link to the Register page where they can create an account
 <p align="center">
-<img src="assets/images-features/login.png" width="100%" height="100%">
+<img src="assets/images-features/signin.png" width="100%" height="100%">
 </p>
 
 <p align="center">
