@@ -71,7 +71,7 @@ MESSAGE_TAGS = {
     messages.INFO: 'alert-info',
     messages.SUCCESS: 'alert-success',
     messages.WARNING: 'alert-warning',
-    messages.ERROR: 'alert-denger',
+    messages.ERROR: 'alert-danger',
 }
 
 CRISPY_TEMPLATES_PACK = 'bootstrap4'
