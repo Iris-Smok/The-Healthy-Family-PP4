@@ -6,6 +6,7 @@ from django.views import generic, View
 from django.views.generic import UpdateView
 from django.db.models import Count
 from django.utils.text import slugify
+from django.contrib import messages
 from django.http import HttpResponseRedirect
 from django.contrib.auth.models import User
 from django.core.paginator import Paginator
@@ -51,22 +52,6 @@ class SearchRecipe(View):
             'searched': searched
         }
         return render(request, 'search.html', context)
-
-# class SearchRecipe(View):
-#     """ Search recipes view"""
-
-#     def get(self, request):
-#         """ Search bar view"""
-#         searched = request.GET['searched']
-#         post = Post.objects.filter(title__icontains=searched)
-#         paginator = Paginator(post, 6)  # Show 6 recipes per page
-#         page_number = request.GET.get('page')
-#         page_obj = paginator.get_page(page_number)
-#         context = {
-#             'page_obj': page_obj,
-#             'searched': searched
-#         }
-#         return render(request, 'search.html', context)
 
 
 class AllRecipes(generic.ListView):
@@ -219,7 +204,7 @@ class AddRecipe(View):
             recipe.save()
             return redirect('your_recipes')
         else:
-            # create message error to complete all the fields
+            messages.error(self.request, 'Please complete all required fields')
             recipe_form = RecipeForm()
 
         return render(
