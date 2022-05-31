@@ -99,7 +99,7 @@ This website will offer all of these things whilst also allowing for intuitive n
 ### **Home Page**
 *Navigation bar:* 
 - The navigation bar appears on every page so users can easily navigate through the site
-- Navigation bar has links for 'Home', 'Recipes' and 'Contact us' more links will be shown to logged in users
+- Navigation bar has links for 'Home', 'Recipes' and 'Login/Register' more links will be shown to logged in users
 - If the user is logged in then the left side of the menu shows links for pages that only authorized users can visit and use, they are: 'Favorite Recipes', 'Your Recipes' and  'Logout'. Otherwise, the user will be given the option to 'Register' or 'Login'
 - The user name will also appear on the bar, indicating which user is logged in
 - A search bar is nested in the navbar to find recipes quickly
@@ -119,9 +119,6 @@ This website will offer all of these things whilst also allowing for intuitive n
 - The Most Loved Recipes section displays the top 5 recipes with the most likes
 - Each recipe takes the user to the recipe details page
 - At the bottom of the list there is a link to the Recipes page that takes users to the page with all the recipes
-
-*Contact Us:*
-- The Contact Us section allows users to contact the administrator if they have any suggestions or questions
 
 *Footer:*
 - Appears on every page snd contains social links
@@ -200,15 +197,16 @@ Wireframes for each device are linked here:
 ## Design 
 
 ## Chosen Color 
-Color palette from Coolors
+Color palette from [Coolors](https://coolors.co/9df57a-3c444c-fee73b-ff4f98-2daaf3-a9bedb)
 <p align="center">
-<img src="static/images/used-colors.png" width="900" height="250">
+<img src="assets/documents/used-colors.png" width="800" height="300">
 </p>
 
 - **#BBBBBB** - navbar background color. It fits nicely with the hero image.
 - **#FFC107** - buttons color. I choose this color because it matches nicely with the rest of the page and it elevates the look of the page
 - **#F9F9F9** - body site color. Fits nicely with the rest of the page. I choose this color because normal white color is to bright
 - **#F1E3CF**- background color for login/register forms. I choose this color because it fits nicely with side image
+- **#484747** - footer background color
 
 
 
