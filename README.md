@@ -5,7 +5,7 @@
 <img src="assets/images/responsive-site.png" width="600" height="100%">
 </p>
 
-This is a full-stack framework project built using Django, Python, HTML, CSS and JavaScript. My goal is to create a functioning and responsive website, that allows users to post, comment and like or unlike recipes. This project has been built for educational purposes.
+This is a full-stack framework project built using Django, Python, HTML and CSS. My goal is to create a functioning and responsive website, that allows users to post, comment and like or unlike recipes. This project has been built for educational purposes.
 
 # About
 The Healthy Family is a website where users can comment, like and view recipes and also share their own recipes with other users.
@@ -31,13 +31,9 @@ This page is intended for all parents and others who are looking for inspiration
 
 8. [Testing](#testing)
 
-9. [Validating](#validating)
+9. [Deployment](#deployment)
 
-10. [Final Product](#final-product)
-
-11. [Deployment](#deployment)
-
-12. [Credits](#credits)
+10. [Credits](#credits)
 
 #
 # UX
@@ -446,19 +442,20 @@ To create a new repository I took the following steps:
 
 # Credits
 
-- All content was written by Iris Smok
-- The structure of the gallery page is similar to the "Love Running" gallery page. I customized the design to fit my website.
-
+- [Summernote](https://github.com/summernote/django-summernote) - I learn how to change summernote toolbar
+- [Code Institute](https://codeinstitute.net/ie/) - 'I think therefore I blog' project helped me with recipe details page and pagination
+- [Django documentation](https://docs.djangoproject.com/en/4.0/topics/pagination/) - also helped me with pagination and other problems
 - [Search bar](https://www.teckiy.com/blog/implementation-of-search-bar-using-django-in-any-website-2936659075/) - this site is used to help me build Search bar
-- [Taste](https://www.taste.com.au/) - I copied recipes from this site for test posts
-
-## Content
+- [Taste](https://www.taste.com.au/) - all recipes were taken from Taste
 
 
 ## Media
+- All images were taken from[Pixabay](https://pixabay.com/) and [Unsplash](https://unsplash.com/)
 
 
 ## Acknowledgements
+- Thanks to my mentor for helpful feedback
+- Shean tutor for helping me fix the 404 bug
 
 
 
